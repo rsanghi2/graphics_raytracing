@@ -72,12 +72,15 @@ glm::dvec3 TextureMap::getMappedValue(const glm::dvec2 &coord) const {
 }
 
 glm::dvec3 TextureMap::getPixelAt(int x, int y) const {
-  // YOUR CODE HERE
+  // YOUR CODE HERE, added stuff
   //
   // In order to add texture mapping support to the
   // raytracer, you need to implement this function.
-
-  return glm::dvec3(1, 1, 1);
+  // copied from the raytracer getpixel
+  unsigned char *pixel = buffer.data() + (i + j * buffer_width) * 3; // buffer and buffer_width are wrong i think, idr understand c++ crying emoji
+  return glm::dvec3((double)pixel[0] / 255.0, (double)pixel[1] / 255.0,
+                    (double)pixel[2] / 255.0);
+  // return glm::dvec3(1, 1, 1);
 }
 
 glm::dvec3 MaterialParameter::value(const isect &is) const {

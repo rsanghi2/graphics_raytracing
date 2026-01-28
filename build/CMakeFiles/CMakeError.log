@@ -1,0 +1,14 @@
+Determining if the C compiler works failed with the following output:
+Change Dir: /u/rsanghi/graphics_raytracing/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_502d0/fast && No such file or directory
+Generator: execution of make failed. Make command was: /usr/bin/gmake cmTC_502d0/fast && 
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /u/rsanghi/graphics_raytracing/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_8137e/fast && No such file or directory
+Generator: execution of make failed. Make command was: /usr/bin/gmake cmTC_8137e/fast && 
+
+
