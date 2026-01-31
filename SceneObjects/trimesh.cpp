@@ -83,30 +83,7 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
   // YOUR CODE HERE, added stuff
   //
   // FIXME: Add ray-trimesh intersection
-  if (scene->intersect(r, i)) { // need to replace scene w what?
-    // WHAT IS PARENT?
-    if (parent mesh has non-empty `uvCoords`) {
-      p = point where they intersect;
-      i.setT(what parameter??);
-      glm::dvec2 coords;
-      coords[0] = ; // idk how to set this properly
-      coords[1] = ; // formulas on ppt but what points to use?
-      i.setUVCoordinates(coords);
-    } else if (parent mesh has non-empty `vertexColors`) {
-      p = point where they intersect;
-      glm::dvec3 colors; // needs to be different type
-      // how to interpolate colors?
-      coords[0] = ; // idk how to set this properly
-      coords[1] = ;
-      coords[2] = ;
-      Material newMat = parent->getMaterial();
-      newMat.setDiffuse(colors); // this is def wrong
-      i.setMaterial(newMat);
-    } else {
-      i.setMaterial(parent->getMaterial());
-    }
-    return true;
-  }
+  
 
   /* To determine the color of an intersection, use the following rules:
      - If the parent mesh has non-empty `uvCoords`, barycentrically interpolate

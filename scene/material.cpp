@@ -28,20 +28,37 @@ glm::dvec3 Material::shade(Scene *scene, const ray &r, const isect &i) const {
   // You will need to call both distanceAttenuation() and
   // shadowAttenuation()
   // somewhere in your code in order to compute shadows and light falloff.
-  //	if( debugMode )
-  //		std::cout << "Debugging Phong code..." << std::endl;
+  //  if( debugMode )
+  //    std::cout << "Debugging Phong code..." << std::endl;
 
   // When you're iterating through the lights,
   // you'll want to use code that looks something
   // like this:
   //
-  // for ( const auto& pLight : scene->getAllLights() )
-  // {
-  //              // pLight has type Light*
-  // 		.
-  // 		.
-  // 		.
-  // }
+
+  glm::dvec3 intesity;
+  intesity[0] = i.getMaterial()._ke + i.getMaterial()._ka * scene.ambient();
+
+  for ( const auto& pLight : scene->getAllLights() )
+  {
+    //  auto *materials = i.getMaterials()
+      // for loop through materials using materials[i]
+      // not sure what I is 
+      // from slides, not sure how to get Q unless it is any point in the plane touched by ray??
+      atten = pLight.distanceAttenuation(r.getPosition()) * pLight.shadowAttenuation(r, r.getPosition()); // getposition?
+
+      diffuseTerm = i.getMaterial()._kd * pLight.intensityValue(i) * std::max(0, glm::dot(pLight, i.getN())); // prob fix intensityvalue
+      const glm::dvec3 eye = scene->getCamera().getEye();
+      glm::dvec3 view = eye - r.getPosition();
+      double dot = glm::dot(glm::reflect(pLight, i.getN()), view); // TODOOOO
+      specTerm = i.getMaterial()._ks * pLight.intensityValue(i) * max(dot,0);
+
+      // glm::reflect(incident vector, normal vector)
+    // glm::refract(incident vector, normal vector, ratio of indices of refraction)
+
+      I = I + atten*(diffuseTerm + specTerm)
+
+  }
   return kd(i);
 }
 
@@ -77,10 +94,8 @@ glm::dvec3 TextureMap::getPixelAt(int x, int y) const {
   // In order to add texture mapping support to the
   // raytracer, you need to implement this function.
   // copied from the raytracer getpixel
-  unsigned char *pixel = buffer.data() + (i + j * buffer_width) * 3; // buffer and buffer_width are wrong i think, idr understand c++ crying emoji
-  return glm::dvec3((double)pixel[0] / 255.0, (double)pixel[1] / 255.0,
-                    (double)pixel[2] / 255.0);
-  // return glm::dvec3(1, 1, 1);
+  
+   return glm::dvec3(1, 1, 1);
 }
 
 glm::dvec3 MaterialParameter::value(const isect &is) const {
@@ -97,3 +112,4 @@ double MaterialParameter::intensityValue(const isect &is) const {
   } else
     return (0.299 * _value[0]) + (0.587 * _value[1]) + (0.114 * _value[2]);
 }
+i.spe

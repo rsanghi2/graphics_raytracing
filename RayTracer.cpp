@@ -82,6 +82,18 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
 
   if (scene->intersect(r, i)) {
     // YOUR CODE HERE
+    recursion : // helper? idt so
+    {
+      if (tir || depth <= 0) {
+        stop // base case ts
+      } else {
+        reflection = glm::reflect
+        traceRay(reflection, thresh?, depth--, t?)
+        refraction = glm::refract
+        traceRay(refraction, thresh?, depth--, t?)
+      }
+      // how does this affect material/color???
+    }
 
     // An intersection occurred!  We've got work to do. For now, this code gets
     // the material for the surface that was intersected, and asks that material
@@ -235,17 +247,20 @@ void RayTracer::traceSetup(int w, int h) {
 void RayTracer::traceImage(int w, int h) {
   // Always call traceSetup before rendering anything.
   traceSetup(w, h);
-
-  // YOUR CODE HERE
-  // FIXME: Start one or more threads for ray tracing
-  //
-  // TIPS: Ideally, the traceImage should be executed asynchronously,
-  //       i.e. returns IMMEDIATELY after working threads are launched.
-  //
-  //       An asynchronous traceImage lets the GUI update your results
-  //       while rendering.
+  // loop till w and h call getPixel with each value use i and j 
+  for (int i = 0; i < w; i++) {
+    for (int j = 0; j < h; j++) {
+      S = getPixel(i,j);
+      //call getEye 
+      const glm::dvec3 P = scene->getCamera().getEye();
+      // d = (S - P)/|| S – P||
+      // glm::distance  ( vec< L, T, Q > const &  p0, vec< L, T, Q > const &  p1 )  
+      d = (S-P) / glm::distance (S, P)  // THIS MIGHT BE WRONG 
+      setPixel(i,j,traceRay(scene, P, d))
+    }
+  }
+  
 }
-
 int RayTracer::aaImage() {
   // YOUR CODE HERE
   // FIXME: Implement Anti-aliasing here
