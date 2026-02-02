@@ -36,30 +36,47 @@ glm::dvec3 Material::shade(Scene *scene, const ray &r, const isect &i) const {
   // like this:
   //
 
-  glm::dvec3 intesity;
-  intesity[0] = i.getMaterial()._ke + i.getMaterial()._ka * scene.ambient();
 
-  for ( const auto& pLight : scene->getAllLights() )
+  glm::dvec3 intensity = i.getMaterial().ke(i) +
+                         i.getMaterial().ka(i) * scene->ambient();
+ 
+  glm::dvec3 intersection = r.at(i.getT());
+ 
+  const glm::dvec3 eye = scene->getCamera().getEye();
+  glm::dvec3 view = glm::normalize(eye - intersection);
+ 
+  for (const auto& pLight : scene->getAllLights())
   {
-    //  auto *materials = i.getMaterials()
-      // for loop through materials using materials[i]
-      // not sure what I is 
-      // from slides, not sure how to get Q unless it is any point in the plane touched by ray??
-      atten = pLight.distanceAttenuation(r.getPosition()) * pLight.shadowAttenuation(r, r.getPosition()); // getposition?
+    glm::dvec3 light = pLight->getDirection(intersection);
+   
+    double distAtten = pLight->distanceAttenuation(intersection);
+    glm::dvec3 shadowAtten = pLight->shadowAttenuation(r, intersection);
+    glm::dvec3  atten = distAtten * shadowAtten;
+   
+    glm::dvec3 lightIntensity = pLight->getColor();
 
-      diffuseTerm = i.getMaterial()._kd * pLight.intensityValue(i) * std::max(0, glm::dot(pLight, i.getN())); // prob fix intensityvalue
-      const glm::dvec3 eye = scene->getCamera().getEye();
-      glm::dvec3 view = eye - r.getPosition();
-      double dot = glm::dot(glm::reflect(pLight, i.getN()), view); // TODOOOO
-      specTerm = i.getMaterial()._ks * pLight.intensityValue(i) * max(dot,0);
+    glm::dvec3 L = glm::normalize(light);
+   
+    double nDotL = glm::dot(i.getN(), L);
+    glm::dvec3 diffuseTerm = glm::dvec3(0.0);
+    if (nDotL > 0.0) {
+      diffuseTerm = i.getMaterial().kd(i) * lightIntensity * nDotL;
+    }
+   
+    glm::dvec3 specTerm = glm::dvec3(0.0);
+    if (nDotL > 0.0) {  
+      glm::dvec3 R = glm::reflect(-L, i.getN());
+     
+      double rDotV = glm::dot(R, view);
+      if (rDotV > 0.0) {
+        double specPower = std::pow(rDotV, i.getMaterial().shininess(i));
+        specTerm = i.getMaterial().ks(i) * lightIntensity * specPower;
+      }
+    }
 
-      // glm::reflect(incident vector, normal vector)
-    // glm::refract(incident vector, normal vector, ratio of indices of refraction)
-
-      I = I + atten*(diffuseTerm + specTerm)
-
+    intensity = intensity + atten * (diffuseTerm + specTerm);
   }
-  return kd(i);
+  return intensity;
 }
 
 TextureMap::TextureMap(string filename) {
@@ -89,13 +106,11 @@ glm::dvec3 TextureMap::getMappedValue(const glm::dvec2 &coord) const {
 }
 
 glm::dvec3 TextureMap::getPixelAt(int x, int y) const {
-  // YOUR CODE HERE, added stuff
+  // YOUR CODE HERE
   //
   // In order to add texture mapping support to the
   // raytracer, you need to implement this function.
-  // copied from the raytracer getpixel
-  
-   return glm::dvec3(1, 1, 1);
+  return glm::dvec3(1, 1, 1);
 }
 
 glm::dvec3 MaterialParameter::value(const isect &is) const {
@@ -112,4 +127,3 @@ double MaterialParameter::intensityValue(const isect &is) const {
   } else
     return (0.299 * _value[0]) + (0.587 * _value[1]) + (0.114 * _value[2]);
 }
-i.spe

@@ -79,21 +79,9 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
 #if VERBOSE
   std::cerr << "== current depth: " << depth << std::endl;
 #endif
+  if (depth > 0 && scene->intersect(r, i)) {
 
-  if (scene->intersect(r, i)) {
     // YOUR CODE HERE
-    recursion : // helper? idt so
-    {
-      if (tir || depth <= 0) {
-        stop // base case ts
-      } else {
-        reflection = glm::reflect
-        traceRay(reflection, thresh?, depth--, t?)
-        refraction = glm::refract
-        traceRay(refraction, thresh?, depth--, t?)
-      }
-      // how does this affect material/color???
-    }
 
     // An intersection occurred!  We've got work to do. For now, this code gets
     // the material for the surface that was intersected, and asks that material
@@ -105,6 +93,45 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
 
     const Material &m = i.getMaterial();
     colorC = m.shade(scene.get(), r, i);
+   
+    // reflection
+     // colorC = glm::dvec3(0,0,0);
+      glm::dvec3 reflection = glm::reflect(r.getDirection(), i.getN());
+      ray reflectionRay(r.at(i.getT()), reflection, glm::dvec3(1.0, 1.0, 1.0),
+                    ray::REFLECTION);
+      colorC = colorC + m.kr(i) * traceRay(reflectionRay, thresh, depth - 1, t);
+    
+   
+    // refraction
+
+      // glm::dvec3 normal = i.getN();
+      // double ni;
+      // double nt;
+      // double indexRatio;
+     
+      // if (glm::dot(r.getDirection(), normal) < 0) {
+      //   ni = 1;
+      //   nt = m.index(i);
+      //   indexRatio = ni / nt;
+      // } else {
+      //   ni = m.index(i);
+      //   nt = 1;
+      //   indexRatio = ni / nt;
+      //   normal = -normal;
+      // }
+     
+      // double tirCheck = 1 - indexRatio * indexRatio * (1 - glm::dot(r.getDirection(), normal) * glm::dot(r.getDirection(), normal));
+     
+      // if (glm::length(m.kt(i)) > 0 && tirCheck >= 0) {
+      //   glm::dvec3 refraction = glm::refract(r.getDirection(), normal, indexRatio);
+      //   ray refractionRay(r.at(i.getT()), refraction, glm::dvec3(1.0, 1.0, 1.0),
+      //                 ray::REFRACTION);
+      //   colorC = colorC + m.kt(i) * traceRay(refractionRay, thresh, depth - 1, t);
+      // }
+    
+
+
+
   } else {
     // No intersection. This ray travels to infinity, so we color
     // it according to the background color, which in this (simple)
@@ -116,8 +143,9 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
     //       Check traceUI->cubeMap() to see if cubeMap is loaded
     //       and enabled.
 
-    colorC = glm::dvec3(0.0, 0.0, 0.0);
+    colorC = glm::dvec3(0,0,0);
   }
+
 #if VERBOSE
   std::cerr << "== depth: " << depth + 1 << " done, returning: " << colorC
             << std::endl;
@@ -237,30 +265,28 @@ void RayTracer::traceSetup(int w, int h) {
 /*
  * RayTracer::traceImage
  *
- *	Trace the image and store the pixel data in RayTracer::buffer.
+ *  Trace the image and store the pixel data in RayTracer::buffer.
  *
- *	Arguments:
- *		w:	width of the image buffer
- *		h:	height of the image buffer
+ *  Arguments:
+ *    w:  width of the image buffer
+ *    h:  height of the image buffer
  *
  */
 void RayTracer::traceImage(int w, int h) {
   // Always call traceSetup before rendering anything.
   traceSetup(w, h);
-  // loop till w and h call getPixel with each value use i and j 
+
+  // call getEye
+ //  const glm::dvec3 P = scene->getCamera().getEye();
+
+  // loop till w and h call getPixel with each value use i and j
   for (int i = 0; i < w; i++) {
     for (int j = 0; j < h; j++) {
-      S = getPixel(i,j);
-      //call getEye 
-      const glm::dvec3 P = scene->getCamera().getEye();
-      // d = (S - P)/|| S – P||
-      // glm::distance  ( vec< L, T, Q > const &  p0, vec< L, T, Q > const &  p1 )  
-      d = (S-P) / glm::distance (S, P)  // THIS MIGHT BE WRONG 
-      setPixel(i,j,traceRay(scene, P, d))
+      tracePixel(i, j);
     }
   }
-  
 }
+
 int RayTracer::aaImage() {
   // YOUR CODE HERE
   // FIXME: Implement Anti-aliasing here
@@ -303,3 +329,4 @@ void RayTracer::setPixel(int i, int j, glm::dvec3 color) {
   pixel[1] = (int)(255.0 * color[1]);
   pixel[2] = (int)(255.0 * color[2]);
 }
+
