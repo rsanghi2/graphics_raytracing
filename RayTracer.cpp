@@ -95,11 +95,11 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
     colorC = m.shade(scene.get(), r, i);
    
     // reflection
-     // colorC = glm::dvec3(0,0,0);
-      glm::dvec3 reflection = glm::reflect(r.getDirection(), i.getN());
-      ray reflectionRay(r.at(i.getT()), reflection, glm::dvec3(1.0, 1.0, 1.0),
-                    ray::REFLECTION);
-      colorC = colorC + m.kr(i) * traceRay(reflectionRay, thresh, depth - 1, t);
+    // colorC = glm::dvec3(0,0,0);
+    glm::dvec3 reflection = glm::reflect(r.getDirection(), i.getN());
+    ray reflectionRay(r.at(i.getT()), reflection, glm::dvec3(1.0, 1.0, 1.0),
+                  ray::REFLECTION);
+    colorC = colorC + m.kr(i) * traceRay(reflectionRay, thresh, depth - 1, t);
     
    
     // refraction
@@ -117,12 +117,10 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
       //   ni = m.index(i);
       //   nt = 1;
       //   indexRatio = ni / nt;
-      //   normal = -normal;
+      //   // normal = -normal; ??
       // }
      
-      // double tirCheck = 1 - indexRatio * indexRatio * (1 - glm::dot(r.getDirection(), normal) * glm::dot(r.getDirection(), normal));
-     
-      // if (glm::length(m.kt(i)) > 0 && tirCheck >= 0) {
+      // if (glm::length(m.kt(i)) > 0 && indexRatio >= 0) {
       //   glm::dvec3 refraction = glm::refract(r.getDirection(), normal, indexRatio);
       //   ray refractionRay(r.at(i.getT()), refraction, glm::dvec3(1.0, 1.0, 1.0),
       //                 ray::REFRACTION);
@@ -276,10 +274,7 @@ void RayTracer::traceImage(int w, int h) {
   // Always call traceSetup before rendering anything.
   traceSetup(w, h);
 
-  // call getEye
- //  const glm::dvec3 P = scene->getCamera().getEye();
-
-  // loop till w and h call getPixel with each value use i and j
+  // tracing every pixel
   for (int i = 0; i < w; i++) {
     for (int j = 0; j < h; j++) {
       tracePixel(i, j);

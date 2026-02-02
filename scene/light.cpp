@@ -20,12 +20,6 @@ glm::dvec3 DirectionalLight::shadowAttenuation(const ray &r,
   ray shadowRay(p + RAY_EPSILON * direction, direction, glm::dvec3(1.0, 1.0, 1.0), ray::SHADOW);
   
   isect i;
-  // glm::dvec3 revOrien;
-  // revOrien[0] = -orientation[0];
-  // revOrien[1] = -orientation[1];
-  // revOrien[2] = -orientation[2]; // ????? think its rihgt but hello
-  // reverse.setDirection(revOrien);
-  // reverse.setPosition(p);
   if (scene->intersect(shadowRay, i)) {
     return glm::dvec3(0, 0, 0);
   }
@@ -44,8 +38,8 @@ double PointLight::distanceAttenuation(const glm::dvec3 &P) const {
   // You'll need to modify this method to attenuate the intensity
   // of the light based on the distance between the source and the
   // point P.  For now, we assume no attenuation and just return 1.0
-  double d = glm::distance(P, position); // changed
-  //sqrt(((P[0] - position[0]) * (P[0] - position[0])) + ((P[1] - position[1]) * (P[1] - position[1])) + ((P[2] - position[2]) * (P[2] - position[2])));
+
+  double d = glm::distance(P, position);
   double formula = 1 / (constantTerm + linearTerm * d + quadraticTerm * d * d);
   return formula; // maybe clamp at 1 later
 }
@@ -61,15 +55,12 @@ glm::dvec3 PointLight::shadowAttenuation(const ray &r,
   // YOUR CODE HERE:
   // You should implement shadow-handling code here.
 
-  glm::dvec3 direction = glm::normalize(position - p); // TODO check p type
+  glm::dvec3 direction = glm::normalize(position - p);
   isect i;
   ray shadowRay(p + RAY_EPSILON * direction, direction, glm::dvec3(1.0, 1.0, 1.0), ray::SHADOW); 
   if (scene->intersect(shadowRay, i)) {
-    double t = i.getT(); 
-    double distance = glm::distance(p, position); // changed
-    //sqrt(((p[0] - position[0]) * (p[0] - position[0])) + ((p[1] - position[1]) * (p[1] - position[1])) + ((p[2] - position[2]) * (p[2] - position[2])));
-
-    if (t < distance) {
+    double distance = glm::distance(p, position);
+    if (i.getT() < distance) {
      return glm::dvec3(0, 0, 0); 
     }
   }
