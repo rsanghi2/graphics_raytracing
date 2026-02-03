@@ -16,7 +16,7 @@ glm::dvec3 DirectionalLight::shadowAttenuation(const ray &r,
                                                const glm::dvec3 &p) const {
   // YOUR CODE HERE:
   // You should implement shadow-handling code here.
-  glm::dvec3 direction = glm::normalize(-orientation);
+  glm::dvec3 direction = -orientation;
   ray shadowRay(p + RAY_EPSILON * direction, direction, glm::dvec3(1.0, 1.0, 1.0), ray::SHADOW);
   
   isect i;

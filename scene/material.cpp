@@ -44,7 +44,7 @@ glm::dvec3 Material::shade(Scene *scene, const ray &r, const isect &i) const {
  
   const glm::dvec3 eye = scene->getCamera().getEye();
   glm::dvec3 view = glm::normalize(eye - intersection);
- 
+
   for (const auto& pLight : scene->getAllLights())
   {
     // attenuation
@@ -53,7 +53,7 @@ glm::dvec3 Material::shade(Scene *scene, const ray &r, const isect &i) const {
     glm::dvec3  atten = distAtten * shadowAtten;
 
     // diffuse
-    glm::dvec3 L = glm::normalize(pLight->getDirection(intersection));
+    glm::dvec3 L = pLight->getDirection(intersection);
     glm::dvec3 diffuseTerm = glm::dvec3(0, 0, 0);
     double nDotL = glm::dot(i.getN(), L);
     if (nDotL > 0) {
@@ -62,13 +62,11 @@ glm::dvec3 Material::shade(Scene *scene, const ray &r, const isect &i) const {
    
     // specular
     glm::dvec3 specTerm = glm::dvec3(0, 0, 0);
-    if (nDotL > 0) {  
-      glm::dvec3 R = glm::reflect(-L, i.getN());
-      double rDotV = glm::dot(R, view);
-      if (rDotV > 0) {
-        double pow = std::pow(rDotV, i.getMaterial().shininess(i)); // need std?
-        specTerm = i.getMaterial().ks(i) * pLight->getColor() * pow;
-      }
+    glm::dvec3 R = glm::reflect(-L, i.getN());
+    double rDotV = glm::dot(R, view);
+    if (rDotV > 0) {
+      double pow = std::pow(rDotV, i.getMaterial().shininess(i)); // need std?
+      specTerm = i.getMaterial().ks(i) * pLight->getColor() * pow;
     }
 
     intensity = intensity + atten * (diffuseTerm + specTerm);
