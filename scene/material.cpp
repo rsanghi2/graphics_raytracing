@@ -147,4 +147,3 @@ double MaterialParameter::intensityValue(const isect &is) const {
   } else
     return (0.299 * _value[0]) + (0.587 * _value[1]) + (0.114 * _value[2]);
 }
-

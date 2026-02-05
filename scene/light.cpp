@@ -75,3 +75,4 @@ glm::dvec3 PointLight::shadowAttenuation(const ray &r,
 }
 
 #define VERBOSE 0
+

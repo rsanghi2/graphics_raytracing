@@ -122,10 +122,7 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
     double area = Aa + Ab+ Ac;
     double alpha = Aa / area;
     double beta = Ab / area;
-    if(t <= RAY_EPSILON){
-      i.setObject(this->parent);
-      return false;
-    }
+  
     i.setT(t);
     i.setN(this->normal);
     i.setObject(this->parent);
@@ -141,7 +138,7 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
               // IS THIS RIGHT ???
               glm::dvec2 uv0 = this->parent->uvCoords[ids[0]]; 
               glm::dvec2 uv1 = this->parent->uvCoords[ids[1]]; 
-              glm::dvec2 uv2 = this->parent->uvCoords[ids[2]]; 
+              glm::dvec2 uv2 = this->parent->uvCoords[ids[2]];
               double gamma = 1.0 - alpha - beta; 
               glm::dvec2 interpolatedUV = alpha * uv0 + beta * uv1 + gamma * uv2; 
               i.setMaterial(this->parent->material);
@@ -149,11 +146,10 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
 
 
       } else if (!this->parent->vertColors.empty()) {
-
-      glm::dvec3 interpolate = alpha * this->parent->vertColors[ids[0]] + beta * this->parent->vertColors[ids[1]] + (1 - alpha - beta) * this->parent->vertColors[ids[2]]; // is ids rightttt what is it ???
-      Material material = this->parent->material;
-      material.setDiffuse(interpolate);
-      i.setMaterial(material);
+        glm::dvec3 interpolate = alpha * this->parent->vertColors[ids[0]] + beta * this->parent->vertColors[ids[1]] + (1 - alpha - beta) * this->parent->vertColors[ids[2]]; // is ids rightttt what is it ???
+        Material material = this->parent->material;
+        material.setDiffuse(interpolate);
+        i.setMaterial(material);
     } else {
         i.setMaterial(this->parent->material);
       }
