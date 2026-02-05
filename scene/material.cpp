@@ -59,6 +59,13 @@ glm::dvec3 Material::shade(Scene *scene, const ray &r, const isect &i) const {
     if (nDotL > 0) {
       diffuseTerm = i.getMaterial().kd(i) * pLight->getColor() * nDotL;
     }
+    if (i.getMaterial().Trans()) {
+      //  if the object is transluscent, add stuff from back
+      double NegativenDotL = glm::dot(-i.getN(), L);
+      if (NegativenDotL > 0) {
+        diffuseTerm = i.getMaterial().kd(i) * pLight->getColor() * NegativenDotL;
+      }
+    }
    
     // specular
     glm::dvec3 specTerm = glm::dvec3(0, 0, 0);
