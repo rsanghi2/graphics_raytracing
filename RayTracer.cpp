@@ -79,7 +79,7 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
 #if VERBOSE
   std::cerr << "== current depth: " << depth << std::endl;
 #endif
-  if (depth > 0 && scene->intersect(r, i)) {
+  if (depth >=0 && scene->intersect(r, i)) {
 
     // YOUR CODE HERE
 
@@ -96,41 +96,44 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
    
     // reflection
     // colorC = glm::dvec3(0,0,0);
-    glm::dvec3 reflection = glm::reflect(r.getDirection(), i.getN());
-    ray reflectionRay(r.at(i.getT()), reflection, glm::dvec3(1.0, 1.0, 1.0),
+    glm::dvec3 reflection = glm::reflect(glm::normalize(r.getDirection()), glm::normalize(i.getN()));
+    ray reflectionRay(r.at(i.getT()) + RAY_EPSILON * reflection, reflection, glm::dvec3(1.0, 1.0, 1.0),
                   ray::REFLECTION);
     colorC = colorC + m.kr(i) * traceRay(reflectionRay, thresh, depth - 1, t);
     
    
     // refraction
 
-      // glm::dvec3 normal = i.getN();
-      // double ni;
-      // double nt;
-      // double indexRatio;
+      glm::dvec3 normal = glm::normalize(i.getN());
+      double ni;
+      double nt;
+      double indexRatio;
      
-      // if (glm::dot(r.getDirection(), normal) < 0) {
-      //   ni = 1;
-      //   nt = m.index(i);
-      //   indexRatio = ni / nt;
-      // } else {
-      //   ni = m.index(i);
-      //   nt = 1;
-      //   indexRatio = ni / nt;
-      //   // normal = -normal; ??
-      // }
+      if (glm::dot(glm::normalize(r.getDirection()), normal) < 0) {
+        ni = 1;
+        nt = m.index(i);
+        indexRatio = ni / nt;
+      } else {
+        ni = m.index(i);
+        nt = 1;
+        indexRatio = ni / nt;
+         normal = -normal;
+      }
      
-      // if (glm::length(m.kt(i)) > 0 && indexRatio >= 0) {
-      //   glm::dvec3 refraction = glm::refract(r.getDirection(), normal, indexRatio);
-      //   ray refractionRay(r.at(i.getT()), refraction, glm::dvec3(1.0, 1.0, 1.0),
-      //                 ray::REFRACTION);
-      //   colorC = colorC + m.kt(i) * traceRay(refractionRay, thresh, depth - 1, t);
-      // }
+      if (glm::length(m.kt(i)) > 0 && indexRatio >= 0) {
+        
+        glm::dvec3 refraction = glm::refract(glm::normalize(r.getDirection()),glm::normalize( normal), indexRatio);
+        if(glm::length(refraction) > 0){
+        ray refractionRay(r.at(i.getT()) + RAY_EPSILON*refraction, refraction, glm::dvec3(1,1,1),
+                      ray::REFRACTION);
+        colorC = colorC +  m.kt(i) * traceRay(refractionRay, thresh, depth - 1, t);
+      }
+    }
     
 
 
 
-  } else {
+  }  else {
     // No intersection. This ray travels to infinity, so we color
     // it according to the background color, which in this (simple)
     // case is just black.
@@ -140,8 +143,11 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
     // traceUI->getCubeMap();
     //       Check traceUI->cubeMap() to see if cubeMap is loaded
     //       and enabled.
-
     colorC = glm::dvec3(0,0,0);
+    if (traceUI->cubeMap()) {
+      colorC = traceUI->getCubeMap()->getColor(r);
+    }
+    // 
   }
 
 #if VERBOSE
@@ -324,4 +330,3 @@ void RayTracer::setPixel(int i, int j, glm::dvec3 color) {
   pixel[1] = (int)(255.0 * color[1]);
   pixel[2] = (int)(255.0 * color[2]);
 }
-

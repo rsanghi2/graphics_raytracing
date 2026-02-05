@@ -4,7 +4,10 @@
 #include <cmath>
 #include <float.h>
 #include <string.h>
+#include <ostream>
+#include <iostream>
 #include "../ui/TraceUI.h"
+
 extern TraceUI *traceUI;
 extern TraceUI *traceUI;
 
@@ -96,6 +99,69 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
        assign this material to the intersection.
      - If neither is true, assign the parent's material to the intersection.
   */
+    
+    bool insideOutside = false;
+    glm::dvec3 a = this->parent->vertices[ids[0]]; 
+    glm::dvec3 b = this->parent->vertices[ids[1]]; 
+    glm::dvec3 c = this->parent->vertices[ids[2]];
+    double t = glm::dot(a - r.getPosition(), this->normal) / glm::dot(this->normal, r.getDirection()); // used different formula bc we didnt have d 
+    glm::dvec3 Q = r.at(t);
+
+
+    glm::dvec3 vqa = Q - a;
+    glm::dvec3 vqb = Q - b;
+    glm::dvec3 vqc = Q - c;
+
+      glm::dvec3 vcb = c-b;
+    glm::dvec3 vac = a-c;
+    glm::dvec3 vab = b-a;
+
+    double Aa = glm::length(glm::cross(vcb, vqb)) / 2;
+    double Ab = glm::length(glm::cross(vac, vqc)) / 2;
+    double Ac = glm::length(glm::cross(vab, vqa)) / 2;
+    double area = Aa + Ab+ Ac;
+    double alpha = Aa / area;
+    double beta = Ab / area;
+    if(t <= RAY_EPSILON){
+      i.setObject(this->parent);
+      return false;
+    }
+    i.setT(t);
+    i.setN(this->normal);
+    i.setObject(this->parent);
+
+    if (glm::dot(glm::cross(vab, vqa), this->normal)  >= 0 && 
+        glm::dot(glm::cross(vcb, vqb), this->normal)  >= 0 &&
+        glm::dot(glm::cross(vac, vqc), this->normal)  >= 0) {
+        insideOutside = true;
+    }
+
+    if (insideOutside) {
+      if (!this->parent->uvCoords.empty()) {
+              // IS THIS RIGHT ???
+              glm::dvec2 uv0 = this->parent->uvCoords[ids[0]]; 
+              glm::dvec2 uv1 = this->parent->uvCoords[ids[1]]; 
+              glm::dvec2 uv2 = this->parent->uvCoords[ids[2]]; 
+              double gamma = 1.0 - alpha - beta; 
+              glm::dvec2 interpolatedUV = alpha * uv0 + beta * uv1 + gamma * uv2; 
+              i.setMaterial(this->parent->material);
+              i.setUVCoordinates(interpolatedUV);
+
+
+      } else if (!this->parent->vertColors.empty()) {
+
+      glm::dvec3 interpolate = alpha * this->parent->vertColors[ids[0]] + beta * this->parent->vertColors[ids[1]] + (1 - alpha - beta) * this->parent->vertColors[ids[2]]; // is ids rightttt what is it ???
+      Material material = this->parent->material;
+      material.setDiffuse(interpolate);
+      i.setMaterial(material);
+    } else {
+        i.setMaterial(this->parent->material);
+      }
+      return true;
+    } else {
+      i.setObject(this->parent);
+      return false;
+    }
 
   i.setObject(this->parent);
   return false;
