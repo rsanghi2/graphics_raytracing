@@ -1,5 +1,5 @@
 CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o: \
- /u/harinik/graphics_raytracing/ui/ModelerCamera.cpp \
+ /u/rsanghi/graphics_raytracing/ui/ModelerCamera.cpp \
  /usr/include/stdc-predef.h /usr/include/glm/gtx/transform.hpp \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/13/cmath /usr/include/c++/13/bits/requires_hosted.h \
@@ -232,4 +232,4 @@ CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o: \
  /usr/include/FL/Fl_Export.H /usr/include/FL/fl_types.h \
  /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h /usr/include/FL/glu.h \
- /usr/include/GL/glu.h /u/harinik/graphics_raytracing/ui/ModelerCamera.h
+ /usr/include/GL/glu.h /u/rsanghi/graphics_raytracing/ui/ModelerCamera.h

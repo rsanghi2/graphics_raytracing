@@ -12,7 +12,7 @@
 #include <queue>
 #include <thread>
 #include <time.h>
-
+#include <atomic>
 class Scene;
 class Pixel {
 public:
@@ -39,6 +39,7 @@ public:
   double aspectRatio();
 
   void traceImage(int w, int h);
+  void traceLine(int start, int end);
   int aaImage();
   bool checkRender();
   void waitRender();
@@ -57,7 +58,7 @@ public:
 
 private:
   glm::dvec3 trace(double x, double y);
-
+    int numThreads;
   std::unique_ptr<Scene> scene;
   std::vector<unsigned char> buffer;
   double thresh;
@@ -69,7 +70,13 @@ private:
   int block_size;
   double aaThresh;
   int samples;
+  std::thread *workerThreads;
+  bool isRendering;
+
 
 };
 
 #endif // __RAYTRACER_H__
+
+
+

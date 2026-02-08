@@ -83,6 +83,7 @@ bool TrimeshFace::intersect(ray &r, isect &i) const {
 // and put the parameter in t and the barycentric coordinates of the
 // intersection in u (alpha) and v (beta).
 bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
+
   // YOUR CODE HERE, added stuff
   //
   // FIXME: Add ray-trimesh intersection
@@ -105,6 +106,11 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
     glm::dvec3 b = this->parent->vertices[ids[1]]; 
     glm::dvec3 c = this->parent->vertices[ids[2]];
     double t = glm::dot(a - r.getPosition(), this->normal) / glm::dot(this->normal, r.getDirection()); // used different formula bc we didnt have d 
+    if(t<0){
+        i.setObject(this->parent);
+        return false;
+    }
+    
     glm::dvec3 Q = r.at(t);
 
 
@@ -112,20 +118,23 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
     glm::dvec3 vqb = Q - b;
     glm::dvec3 vqc = Q - c;
 
-      glm::dvec3 vcb = c-b;
+    glm::dvec3 vcb = c-b;
     glm::dvec3 vac = a-c;
     glm::dvec3 vab = b-a;
 
-    double Aa = glm::length(glm::cross(vcb, vqb)) / 2;
-    double Ab = glm::length(glm::cross(vac, vqc)) / 2;
-    double Ac = glm::length(glm::cross(vab, vqa)) / 2;
+    double Aa = glm::length(glm::cross(vcb, vqb)) / 2.0;
+    double Ab = glm::length(glm::cross(vac, vqc)) / 2.0;
+    double Ac = glm::length(glm::cross(vab, vqa)) / 2.0;
     double area = Aa + Ab+ Ac;
     double alpha = Aa / area;
     double beta = Ab / area;
   
-    i.setT(t);
-    i.setN(this->normal);
-    i.setObject(this->parent);
+    if(area == 0.0){
+      return false;
+    }
+    if(alpha < 0.0 || beta < 0.0 || (1-alpha-beta )< 0.0){
+      return false;
+    }
 
     if (glm::dot(glm::cross(vab, vqa), this->normal)  >= 0 && 
         glm::dot(glm::cross(vcb, vqb), this->normal)  >= 0 &&
@@ -134,25 +143,42 @@ bool TrimeshFace::intersectLocal(ray &r, isect &i) const {
     }
 
     if (insideOutside) {
-      if (!this->parent->uvCoords.empty()) {
-              // IS THIS RIGHT ???
-              glm::dvec2 uv0 = this->parent->uvCoords[ids[0]]; 
-              glm::dvec2 uv1 = this->parent->uvCoords[ids[1]]; 
-              glm::dvec2 uv2 = this->parent->uvCoords[ids[2]];
+
+
+
+      if (parent->uvCoords.size() != 0) {
+              // IS THIS RIGHT ??? // make same as else if
+              glm::dvec2 uv0 = parent->uvCoords[ids[0]]; 
+              glm::dvec2 uv1 = parent->uvCoords[ids[1]]; 
+              glm::dvec2 uv2 = parent->uvCoords[ids[2]];
               double gamma = 1.0 - alpha - beta; 
               glm::dvec2 interpolatedUV = alpha * uv0 + beta * uv1 + gamma * uv2; 
-              i.setMaterial(this->parent->material);
+              // i.setMaterial(this->parent->material);
               i.setUVCoordinates(interpolatedUV);
-
-
-      } else if (!this->parent->vertColors.empty()) {
+        // i.setUVCoordinates(glm::dvec3(1,1,1));
+           
+      } else if (parent->vertColors.size() != 0) {
         glm::dvec3 interpolate = alpha * this->parent->vertColors[ids[0]] + beta * this->parent->vertColors[ids[1]] + (1 - alpha - beta) * this->parent->vertColors[ids[2]]; // is ids rightttt what is it ???
         Material material = this->parent->material;
         material.setDiffuse(interpolate);
+        // material.setDiffuse(glm::dvec3(1,1,1));
         i.setMaterial(material);
-    } else {
+        
+      } else {
         i.setMaterial(this->parent->material);
+        
       }
+      if(this->parent->normals.size()!=0) {
+      glm::dvec3 n = alpha * this->parent->normals[ids[0]] + beta * this->parent->normals[ids[1]] + (1-alpha-beta) * this->parent->normals[ids[2]];
+    i.setN(glm::normalize(n));
+      }
+      else{
+        i.setN(this->normal);
+      }
+      i.setT(t);
+    // i.setN(this->normal);
+    i.setObject(this->parent);
+      
       return true;
     } else {
       i.setObject(this->parent);
@@ -186,4 +212,5 @@ void Trimesh::generateNormals() {
 
   vertNorms = true;
 }
+
 

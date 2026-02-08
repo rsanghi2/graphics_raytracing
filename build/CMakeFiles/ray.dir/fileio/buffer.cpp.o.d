@@ -1,7 +1,7 @@
 CMakeFiles/ray.dir/fileio/buffer.cpp.o: \
- /u/harinik/graphics_raytracing/fileio/buffer.cpp \
+ /u/rsanghi/graphics_raytracing/fileio/buffer.cpp \
  /usr/include/stdc-predef.h \
- /u/harinik/graphics_raytracing/fileio/buffer.h \
+ /u/rsanghi/graphics_raytracing/fileio/buffer.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

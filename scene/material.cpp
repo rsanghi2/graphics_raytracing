@@ -55,7 +55,7 @@ glm::dvec3 Material::shade(Scene *scene, const ray &r, const isect &i) const {
     // diffuse
     glm::dvec3 L = glm::normalize(pLight->getDirection(intersection));
     glm::dvec3 diffuseTerm = glm::dvec3(0, 0, 0);
-    double nDotL = glm::dot(i.getN(), L);
+    double nDotL = glm::dot(glm::normalize(i.getN()), L);
     if (nDotL > 0) {
       diffuseTerm = i.getMaterial().kd(i) * pLight->getColor() * nDotL;
     }
@@ -154,3 +154,4 @@ double MaterialParameter::intensityValue(const isect &is) const {
   } else
     return (0.299 * _value[0]) + (0.587 * _value[1]) + (0.114 * _value[2]);
 }
+

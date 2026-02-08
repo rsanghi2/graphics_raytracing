@@ -1,7 +1,7 @@
 CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o: \
- /u/harinik/graphics_raytracing/SceneObjects/trimesh.cpp \
+ /u/rsanghi/graphics_raytracing/SceneObjects/trimesh.cpp \
  /usr/include/stdc-predef.h \
- /u/harinik/graphics_raytracing/SceneObjects/trimesh.h \
+ /u/rsanghi/graphics_raytracing/SceneObjects/trimesh.h \
  /usr/include/c++/13/list /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -123,8 +123,8 @@ CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /u/harinik/graphics_raytracing/SceneObjects/../scene/kdTree.h \
- /u/harinik/graphics_raytracing/SceneObjects/../scene/material.h \
+ /u/rsanghi/graphics_raytracing/SceneObjects/../scene/kdTree.h \
+ /u/rsanghi/graphics_raytracing/SceneObjects/../scene/material.h \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -305,9 +305,9 @@ CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/basic_string.tcc \
- /u/harinik/graphics_raytracing/SceneObjects/../scene/ray.h \
- /u/harinik/graphics_raytracing/SceneObjects/../scene/material.h \
- /u/harinik/graphics_raytracing/SceneObjects/../scene/scene.h \
+ /u/rsanghi/graphics_raytracing/SceneObjects/../scene/ray.h \
+ /u/rsanghi/graphics_raytracing/SceneObjects/../scene/material.h \
+ /u/rsanghi/graphics_raytracing/SceneObjects/../scene/scene.h \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
@@ -323,9 +323,9 @@ CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
  /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h \
- /u/harinik/graphics_raytracing/SceneObjects/../scene/bbox.h \
- /u/harinik/graphics_raytracing/SceneObjects/../scene/camera.h \
- /u/harinik/graphics_raytracing/SceneObjects/../scene/ray.h \
+ /u/rsanghi/graphics_raytracing/SceneObjects/../scene/bbox.h \
+ /u/rsanghi/graphics_raytracing/SceneObjects/../scene/camera.h \
+ /u/rsanghi/graphics_raytracing/SceneObjects/../scene/ray.h \
  /usr/include/glm/gtc/matrix_transform.hpp \
  /usr/include/glm/ext/matrix_projection.hpp \
  /usr/include/glm/gtc/constants.hpp \
@@ -354,4 +354,4 @@ CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/iostream \
  /usr/include/c++/13/istream /usr/include/c++/13/bits/istream.tcc \
- /u/harinik/graphics_raytracing/SceneObjects/../ui/TraceUI.h
+ /u/rsanghi/graphics_raytracing/SceneObjects/../ui/TraceUI.h

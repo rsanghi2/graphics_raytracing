@@ -21,6 +21,8 @@
 
 #include <fstream>
 #include <iostream>
+#include <atomic>
+
 
 using namespace std;
 extern TraceUI *traceUI;
@@ -122,7 +124,7 @@ glm::dvec3 RayTracer::traceRay(ray &r, const glm::dvec3 &thresh, int depth,
      
       if (glm::length(m.kt(i)) > 0 && indexRatio >= 0) {
         
-        glm::dvec3 refraction = glm::refract(glm::normalize(r.getDirection()),glm::normalize( normal), indexRatio);
+        glm::dvec3 refraction = glm::normalize(glm::refract(glm::normalize(r.getDirection()),glm::normalize( normal), indexRatio));
         if(glm::length(refraction) > 0){
         ray refractionRay(r.at(i.getT()) + RAY_EPSILON*refraction, refraction, glm::dvec3(1,1,1),
                       ray::REFRACTION);
@@ -242,6 +244,16 @@ bool RayTracer::loadScene(const char *fn) {
 }
 
 void RayTracer::traceSetup(int w, int h) {
+  // if(workerThreads){
+  //   isRendering = false;
+  //   for(int i = 0; i < numThreads;i++){
+  //   if(workerThreads[i].joinable()){
+  //     workerThreads[i].join();
+  //   }
+  // }
+  //   delete[] workerThreads;
+  //   workerThreads = nullptr;
+  // }
   size_t newBufferSize = w * h * 3;
   if (newBufferSize != buffer.size()) {
     bufferSize = newBufferSize;
@@ -264,6 +276,7 @@ void RayTracer::traceSetup(int w, int h) {
 
   // YOUR CODE HERE
   // FIXME: Additional initializations
+  
 }
 
 /*
@@ -278,11 +291,41 @@ void RayTracer::traceSetup(int w, int h) {
  */
 void RayTracer::traceImage(int w, int h) {
   // Always call traceSetup before rendering anything.
-  traceSetup(w, h);
+  
+ // waitRender();
 
-  // tracing every pixel
-  for (int i = 0; i < w; i++) {
-    for (int j = 0; j < h; j++) {
+  traceSetup(w, h);
+  isRendering = true;
+  workerThreads = new std::thread[threads];
+  numThreads = threads;
+
+  int rowsPerThread = h/threads;
+  int remainder = h % threads;
+  for(int i = 0; i < threads;i++){
+    int startRow  = i * rowsPerThread + std::min(i, remainder);
+    int endRow = startRow+ rowsPerThread + (i < remainder ? 1 : 0);
+    // if (i == threads -1){
+    //   endRow = h;
+    // }
+    // else {
+    //   endRow = (i+ 1) * rowsPerThread;
+    // }
+    workerThreads[i] = std::thread(&RayTracer::traceLine, this, startRow, endRow);
+    
+  }
+  
+waitRender();
+
+  // // tracing every pixel
+  // for (int i = 0; i < w; i++) {
+  //   for (int j = 0; j < h; j++) {
+  //     tracePixel(i, j);
+  //   }
+  // }
+}
+void RayTracer::traceLine(int start, int end){
+  for (int j = start; j < end; j++) {
+    for (int i = 0; i < buffer_width; i++) {
       tracePixel(i, j);
     }
   }
@@ -304,7 +347,7 @@ bool RayTracer::checkRender() {
   //
   // TIPS: Introduce an array to track the status of each worker thread.
   //       This array is maintained by the worker threads.
-  return true;
+  return !isRendering;
 }
 
 void RayTracer::waitRender() {
@@ -314,6 +357,12 @@ void RayTracer::waitRender() {
   //        traceImage implementation.
   //
   // TIPS: Join all worker threads here.
+  for(int i = 0; i < numThreads;i++){
+    if(workerThreads[i].joinable()){
+      workerThreads[i].join();
+    }
+  }
+  isRendering = false;
 }
 
 

@@ -1,6 +1,6 @@
 CMakeFiles/ray.dir/ui/TraceUI.cc.o: \
- /u/harinik/graphics_raytracing/ui/TraceUI.cc /usr/include/stdc-predef.h \
- /u/harinik/graphics_raytracing/ui/TraceUI.h /usr/include/c++/13/memory \
+ /u/rsanghi/graphics_raytracing/ui/TraceUI.cc /usr/include/stdc-predef.h \
+ /u/rsanghi/graphics_raytracing/ui/TraceUI.h /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -156,7 +156,7 @@ CMakeFiles/ray.dir/ui/TraceUI.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
- /u/harinik/graphics_raytracing/ui/../scene/cubeMap.h \
+ /u/rsanghi/graphics_raytracing/ui/../scene/cubeMap.h \
  /usr/include/glm/vec3.hpp /usr/include/glm/ext/vector_bool3.hpp \
  /usr/include/glm/detail/type_vec3.hpp \
  /usr/include/glm/detail/qualifier.hpp /usr/include/glm/detail/setup.hpp \
@@ -176,7 +176,7 @@ CMakeFiles/ray.dir/ui/TraceUI.cc.o: \
  /usr/include/glm/detail/setup.hpp /usr/include/glm/ext/vector_uint3.hpp \
  /usr/include/glm/ext/vector_uint3_sized.hpp \
  /usr/include/glm/ext/scalar_uint_sized.hpp \
- /u/harinik/graphics_raytracing/ui/../scene/material.h \
+ /u/rsanghi/graphics_raytracing/ui/../scene/material.h \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -305,7 +305,7 @@ CMakeFiles/ray.dir/ui/TraceUI.cc.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /u/harinik/graphics_raytracing/libs/json.hpp \
+ /u/rsanghi/graphics_raytracing/libs/json.hpp \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \

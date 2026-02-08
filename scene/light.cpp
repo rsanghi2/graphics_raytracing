@@ -20,7 +20,7 @@ glm::dvec3 DirectionalLight::shadowAttenuation(const ray &r,
   ray shadowRay(p + RAY_EPSILON * direction, direction, glm::dvec3(1.0, 1.0, 1.0), ray::SHADOW);
   
   isect i;
-  if (scene->intersect(shadowRay, i)) {
+  while (scene->intersect(shadowRay, i)) {
     if (i.getMaterial().Trans()) {
       return glm::dvec3(1.0, 1.0, 1.0) * i.getMaterial().kt(i);
     }
