@@ -337,6 +337,26 @@ int RayTracer::aaImage() {
   //
   // TIP: samples and aaThresh have been synchronized with TraceUI by
   //      RayTracer::traceSetup() function
+
+  double samplesPerSide = sqrt(samples);
+  
+  for (int i = 0; i < buffer_width; i ++) {
+    for (int j = 0; j < buffer_height; j ++) {
+      glm::dvec3 colorAvg = {0,0,0};
+      for (double sampleX = 0; sampleX < samplesPerSide; sampleX++) {
+        for (double sampleY = 0; sampleY < samplesPerSide; sampleY++) {
+          double posX = (i + (sampleX + 0.5) / samplesPerSide) / buffer_width;
+          double posY = (j + (sampleY + 0.5) / samplesPerSide) / buffer_height;
+          ray toCast(glm::dvec3 {0,0,0}, glm::dvec3 {0,0,0}, glm::dvec3 {1,1,1}, ray::VISIBILITY);
+          scene->getCamera().rayThrough(posX, posY, toCast);
+          double dummy;
+          colorAvg += traceRay(toCast, aaThresh, traceUI->getDepth(), dummy); // ?
+        }
+      }
+      setPixel(i, j, colorAvg / (double) samples);
+    }
+  }
+
   return 0;
 }
 

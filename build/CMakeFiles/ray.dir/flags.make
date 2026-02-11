@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/usr/lib/fltk -isystem /u/rsanghi/graphics_raytracing/libs
 
-CXX_FLAGS =  -Wall -Wextra -Wno-unknown-pragmas -std=gnu++17
+CXX_FLAGS =  -Wall -Wextra -Wno-unknown-pragmas -O3 -DNDEBUG -std=gnu++17
 

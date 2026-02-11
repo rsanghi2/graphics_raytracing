@@ -487,13 +487,22 @@ CMakeFiles/ray.dir/RayTracer.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -532,6 +541,8 @@ CMakeFiles/ray.dir/RayTracer.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -882,13 +893,20 @@ CMakeFiles/ray.dir/SceneObjects/Box.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -927,6 +945,8 @@ CMakeFiles/ray.dir/SceneObjects/Box.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -1270,13 +1290,20 @@ CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -1315,6 +1342,8 @@ CMakeFiles/ray.dir/SceneObjects/Cone.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -1658,13 +1687,20 @@ CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -1703,6 +1739,8 @@ CMakeFiles/ray.dir/SceneObjects/Cylinder.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -2129,13 +2167,20 @@ CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -2174,6 +2219,8 @@ CMakeFiles/ray.dir/SceneObjects/Sphere.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -2522,13 +2569,20 @@ CMakeFiles/ray.dir/SceneObjects/Square.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -2567,6 +2621,8 @@ CMakeFiles/ray.dir/SceneObjects/Square.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -2949,13 +3005,22 @@ CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -2994,6 +3059,8 @@ CMakeFiles/ray.dir/SceneObjects/trimesh.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -3085,7 +3152,12 @@ CMakeFiles/ray.dir/fileio/bitmap.cpp.o
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/time64.h
  /usr/include/x86_64-linux-gnu/bits/timesize.h
  /usr/include/x86_64-linux-gnu/bits/types.h
@@ -3237,11 +3309,18 @@ CMakeFiles/ray.dir/fileio/buffer.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -3279,6 +3358,8 @@ CMakeFiles/ray.dir/fileio/buffer.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -3436,13 +3517,22 @@ CMakeFiles/ray.dir/fileio/images.cc.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -3480,6 +3570,8 @@ CMakeFiles/ray.dir/fileio/images.cc.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -3621,13 +3713,21 @@ CMakeFiles/ray.dir/fileio/pngimage.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
+ /usr/include/x86_64-linux-gnu/bits/setjmp2.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -3662,10 +3762,14 @@ CMakeFiles/ray.dir/fileio/pngimage.cpp.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/unistd-decl.h
+ /usr/include/x86_64-linux-gnu/bits/unistd.h
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h
@@ -4074,7 +4178,9 @@ CMakeFiles/ray.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stat.h
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h
@@ -4082,8 +4188,15 @@ CMakeFiles/ray.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
@@ -4125,6 +4238,8 @@ CMakeFiles/ray.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -4617,13 +4732,22 @@ CMakeFiles/ray.dir/parser/JsonParser.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -4662,6 +4786,8 @@ CMakeFiles/ray.dir/parser/JsonParser.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -5079,13 +5205,20 @@ CMakeFiles/ray.dir/parser/Parser.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -5124,6 +5257,8 @@ CMakeFiles/ray.dir/parser/Parser.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -5307,13 +5442,20 @@ CMakeFiles/ray.dir/parser/ParserException.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -5351,6 +5493,8 @@ CMakeFiles/ray.dir/parser/ParserException.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -5509,11 +5653,18 @@ CMakeFiles/ray.dir/parser/Token.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -5551,6 +5702,8 @@ CMakeFiles/ray.dir/parser/Token.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -5728,13 +5881,20 @@ CMakeFiles/ray.dir/parser/Tokenizer.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -5772,6 +5932,8 @@ CMakeFiles/ray.dir/parser/Tokenizer.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -6092,13 +6254,20 @@ CMakeFiles/ray.dir/scene/bbox.cc.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -6137,6 +6306,8 @@ CMakeFiles/ray.dir/scene/bbox.cc.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -6458,13 +6629,20 @@ CMakeFiles/ray.dir/scene/camera.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -6503,6 +6681,8 @@ CMakeFiles/ray.dir/scene/camera.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -6825,13 +7005,20 @@ CMakeFiles/ray.dir/scene/cubeMap.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -6870,6 +7057,8 @@ CMakeFiles/ray.dir/scene/cubeMap.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -7304,13 +7493,20 @@ CMakeFiles/ray.dir/scene/light.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -7349,6 +7545,8 @@ CMakeFiles/ray.dir/scene/light.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -7790,13 +7988,20 @@ CMakeFiles/ray.dir/scene/material.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -7835,6 +8040,8 @@ CMakeFiles/ray.dir/scene/material.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -8183,13 +8390,20 @@ CMakeFiles/ray.dir/scene/ray.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -8228,6 +8442,8 @@ CMakeFiles/ray.dir/scene/ray.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -8670,13 +8886,20 @@ CMakeFiles/ray.dir/scene/scene.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -8715,6 +8938,8 @@ CMakeFiles/ray.dir/scene/scene.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -9089,13 +9314,20 @@ CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -9131,10 +9363,14 @@ CMakeFiles/ray.dir/ui/CommandLineUI.cpp.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/unistd-decl.h
+ /usr/include/x86_64-linux-gnu/bits/unistd.h
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -9577,7 +9813,9 @@ CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stat.h
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h
@@ -9585,8 +9823,15 @@ CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
@@ -9625,10 +9870,14 @@ CMakeFiles/ray.dir/ui/CubeMapChooser.cxx.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/unistd-decl.h
+ /usr/include/x86_64-linux-gnu/bits/unistd.h
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -10049,7 +10298,9 @@ CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stat.h
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h
@@ -10057,8 +10308,15 @@ CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
@@ -10100,6 +10358,8 @@ CMakeFiles/ray.dir/ui/GraphicalUI.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
@@ -10361,11 +10621,15 @@ CMakeFiles/ray.dir/ui/ModelerCamera.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -10811,7 +11075,9 @@ CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stat.h
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h
@@ -10819,8 +11085,15 @@ CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
@@ -10862,6 +11135,8 @@ CMakeFiles/ray.dir/ui/TraceGLWindow.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -11279,13 +11554,22 @@ CMakeFiles/ray.dir/ui/TraceUI.cc.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -11324,6 +11608,8 @@ CMakeFiles/ray.dir/ui/TraceUI.cc.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -11741,7 +12027,9 @@ CMakeFiles/ray.dir/ui/debuggingView.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stat.h
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h
@@ -11749,8 +12037,15 @@ CMakeFiles/ray.dir/ui/debuggingView.cpp.o
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
@@ -11792,6 +12087,8 @@ CMakeFiles/ray.dir/ui/debuggingView.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
@@ -11876,13 +12173,22 @@ CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o
  /usr/include/x86_64-linux-gnu/bits/long-double.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/stat.h
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h
  /usr/include/x86_64-linux-gnu/bits/statx.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
+ /usr/include/x86_64-linux-gnu/bits/string_fortified.h
+ /usr/include/x86_64-linux-gnu/bits/strings_fortified.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
@@ -12282,13 +12588,20 @@ CMakeFiles/ray.dir/ui/glObjects.cpp.o
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
  /usr/include/x86_64-linux-gnu/bits/sched.h
+ /usr/include/x86_64-linux-gnu/bits/select-decl.h
  /usr/include/x86_64-linux-gnu/bits/select.h
+ /usr/include/x86_64-linux-gnu/bits/select2.h
  /usr/include/x86_64-linux-gnu/bits/setjmp.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+ /usr/include/x86_64-linux-gnu/bits/stdio.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/stdio2.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
@@ -12327,6 +12640,8 @@ CMakeFiles/ray.dir/ui/glObjects.cpp.o
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h
+ /usr/include/x86_64-linux-gnu/bits/wchar2.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h
