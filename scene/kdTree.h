@@ -27,9 +27,10 @@ template <typename Objects>
 class kdTreeNodes {
 public:
     kdTreeNodes buildTree(std::vector<Objects*> objList, int itemsInLeaf, int depth, BoundingBox bb);
-    glm::dvec2 findBestSplitPlane(std::vector<Objects*> objList, BoundingBox bb);
+    SplitPlane findBestSplitPlane(std::vector<Objects*> objList, BoundingBox bb);
     bool findIntersection(ray &r, isect &i, double &tMin, double &tMax);
 };
+
 template <typename Objects>
 class SplitNode : public kdTreeNodes<Objects> {
 public:
@@ -42,6 +43,7 @@ private:
     kdTreeNodes<Objects*> *left;
     kdTreeNodes<Objects*> *right;
 };
+
 template <typename Objects>
 class LeafNode : public kdTreeNodes<Objects> {
 public:
@@ -49,3 +51,12 @@ public:
 private:
     std::vector<Objects*> objList;
 };
+
+class SplitPlane {
+    double position;
+    int leftCnt;
+    int rightCnt;
+    double leftBoxArea;
+    double rightBoxArea;
+    int axis; // 0 = x, ...
+}
