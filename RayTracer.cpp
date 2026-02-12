@@ -314,7 +314,11 @@ void RayTracer::traceImage(int w, int h) {
     
   }
   
-waitRender();
+  waitRender();
+  if (traceUI->aaSwitch()) {
+    aaImage();
+  }
+
 
   // // tracing every pixel
   // for (int i = 0; i < w; i++) {
