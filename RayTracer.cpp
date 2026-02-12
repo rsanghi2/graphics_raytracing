@@ -350,7 +350,7 @@ int RayTracer::aaImage() {
           ray toCast(glm::dvec3 {0,0,0}, glm::dvec3 {0,0,0}, glm::dvec3 {1,1,1}, ray::VISIBILITY);
           scene->getCamera().rayThrough(posX, posY, toCast);
           double dummy;
-          colorAvg += traceRay(toCast, aaThresh, traceUI->getDepth(), dummy); // ?
+          colorAvg += traceRay(toCast, glm::dvec3 {aaThresh,aaThresh,aaThresh}, traceUI->getDepth(), dummy); // ?
         }
       }
       setPixel(i, j, colorAvg / (double) samples);

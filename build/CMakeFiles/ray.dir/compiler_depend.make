@@ -4,6 +4,7 @@
 CMakeFiles/ray.dir/RayTracer.cpp.o: /u/rsanghi/graphics_raytracing/RayTracer.cpp \
   /u/rsanghi/graphics_raytracing/RayTracer.h \
   /u/rsanghi/graphics_raytracing/libs/json.hpp \
+  /u/rsanghi/graphics_raytracing/scene/camera.h \
   /u/rsanghi/graphics_raytracing/scene/kdTree.h \
   /u/rsanghi/graphics_raytracing/scene/material.h \
   /u/rsanghi/graphics_raytracing/scene/ray.h \
@@ -4807,6 +4808,7 @@ CMakeFiles/ray.dir/parser/JsonParser.cpp.o: /u/rsanghi/graphics_raytracing/parse
   /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h
 
 CMakeFiles/ray.dir/parser/Parser.cpp.o: /u/rsanghi/graphics_raytracing/parser/Parser.cpp \
+  /u/rsanghi/graphics_raytracing/scene/camera.h \
   /u/rsanghi/graphics_raytracing/scene/kdTree.h \
   /u/rsanghi/graphics_raytracing/scene/material.h \
   /u/rsanghi/graphics_raytracing/scene/ray.h \
@@ -8499,6 +8501,7 @@ CMakeFiles/ray.dir/scene/scene.cpp.o: /u/rsanghi/graphics_raytracing/scene/scene
   /usr/include/c++/13/bits/invoke.h \
   /usr/include/c++/13/bits/ios_base.h \
   /usr/include/c++/13/bits/istream.tcc \
+  /usr/include/c++/13/bits/list.tcc \
   /usr/include/c++/13/bits/locale_classes.h \
   /usr/include/c++/13/bits/locale_classes.tcc \
   /usr/include/c++/13/bits/locale_conv.h \
@@ -8539,6 +8542,7 @@ CMakeFiles/ray.dir/scene/scene.cpp.o: /u/rsanghi/graphics_raytracing/scene/scene
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13/bits/stl_list.h \
   /usr/include/c++/13/bits/stl_map.h \
   /usr/include/c++/13/bits/stl_multimap.h \
   /usr/include/c++/13/bits/stl_pair.h \
@@ -8590,6 +8594,7 @@ CMakeFiles/ray.dir/scene/scene.cpp.o: /u/rsanghi/graphics_raytracing/scene/scene
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/limits \
+  /usr/include/c++/13/list \
   /usr/include/c++/13/locale \
   /usr/include/c++/13/map \
   /usr/include/c++/13/memory \
@@ -12201,6 +12206,7 @@ CMakeFiles/ray.dir/ui/debuggingWindow.cxx.o: /u/rsanghi/graphics_raytracing/ui/d
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 CMakeFiles/ray.dir/ui/glObjects.cpp.o: /u/rsanghi/graphics_raytracing/ui/glObjects.cpp \
+  /u/rsanghi/graphics_raytracing/scene/camera.h \
   /u/rsanghi/graphics_raytracing/scene/kdTree.h \
   /u/rsanghi/graphics_raytracing/scene/material.h \
   /u/rsanghi/graphics_raytracing/scene/ray.h \
@@ -13140,13 +13146,23 @@ CMakeFiles/ray.dir/ui/glObjects.cpp.o: /u/rsanghi/graphics_raytracing/ui/glObjec
 
 /usr/include/c++/13/bits/uses_allocator.h:
 
-/u/rsanghi/graphics_raytracing/libs/json.hpp:
+/usr/include/c++/13/bit:
 
-/u/rsanghi/graphics_raytracing/RayTracer.h:
+/usr/include/c++/13/bits/allocated_ptr.h:
 
-/usr/include/glm/detail/type_mat2x4.hpp:
+/usr/include/c++/13/bits/stl_numeric.h:
 
-/usr/include/glm/geometric.hpp:
+/usr/include/glm/ext/matrix_float3x4.hpp:
+
+/usr/include/glm/ext/quaternion_common.hpp:
+
+/usr/include/c++/13/bits/shared_ptr_base.h:
+
+/usr/include/glm/ext/vector_double3_precision.hpp:
+
+/usr/include/FL/Fl_Export.H:
+
+/usr/include/glm/ext/vector_bool4_precision.hpp:
 
 /usr/include/ctype.h:
 
@@ -13186,24 +13202,6 @@ CMakeFiles/ray.dir/ui/glObjects.cpp.o: /u/rsanghi/graphics_raytracing/ui/glObjec
 
 /usr/include/c++/13/bits/stl_bvector.h:
 
-/usr/include/c++/13/bit:
-
-/usr/include/c++/13/bits/allocated_ptr.h:
-
-/usr/include/c++/13/bits/stl_numeric.h:
-
-/usr/include/glm/ext/matrix_float3x4.hpp:
-
-/usr/include/glm/ext/quaternion_common.hpp:
-
-/usr/include/c++/13/bits/shared_ptr_base.h:
-
-/usr/include/glm/ext/vector_double3_precision.hpp:
-
-/usr/include/FL/Fl_Export.H:
-
-/usr/include/glm/ext/vector_bool4_precision.hpp:
-
 /usr/include/c++/13/bits/concept_check.h:
 
 /usr/include/glm/detail/compute_common.hpp:
@@ -13217,6 +13215,14 @@ CMakeFiles/ray.dir/ui/glObjects.cpp.o: /u/rsanghi/graphics_raytracing/ui/glObjec
 /usr/include/glm/ext/matrix_double2x3_precision.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/u/rsanghi/graphics_raytracing/libs/json.hpp:
+
+/u/rsanghi/graphics_raytracing/RayTracer.h:
+
+/usr/include/glm/detail/type_mat2x4.hpp:
+
+/usr/include/glm/geometric.hpp:
 
 /usr/include/FL/Fl_Bitmap.H:
 

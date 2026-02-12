@@ -411,6 +411,9 @@ CMakeFiles/ray.dir/RayTracer.cpp.o: \
  /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
  /usr/include/c++/13/bits/list.tcc \
  /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/kdTree.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/camera.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/material.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/ray.h \
  /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/material.h \
  /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/ray.h \
  /usr/include/glm/gtc/matrix_transform.hpp \

@@ -346,6 +346,9 @@ CMakeFiles/ray.dir/ui/glObjects.cpp.o: \
  /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
  /usr/include/c++/13/bits/list.tcc \
  /u/rsanghi/graphics_raytracing/ui/../SceneObjects/../scene/kdTree.h \
+ /u/rsanghi/graphics_raytracing/ui/../SceneObjects/../scene/camera.h \
+ /u/rsanghi/graphics_raytracing/ui/../SceneObjects/../scene/material.h \
+ /u/rsanghi/graphics_raytracing/ui/../SceneObjects/../scene/ray.h \
  /u/rsanghi/graphics_raytracing/ui/../SceneObjects/../scene/material.h \
  /u/rsanghi/graphics_raytracing/ui/../SceneObjects/../scene/ray.h \
  /usr/include/glm/gtc/matrix_transform.hpp \
