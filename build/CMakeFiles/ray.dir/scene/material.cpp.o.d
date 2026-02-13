@@ -323,7 +323,23 @@ CMakeFiles/ray.dir/scene/material.cpp.o: \
  /u/rsanghi/graphics_raytracing/scene/bbox.h \
  /u/rsanghi/graphics_raytracing/scene/camera.h \
  /u/rsanghi/graphics_raytracing/scene/ray.h \
- /u/rsanghi/graphics_raytracing/scene/kdTree.h /usr/include/c++/13/list \
+ /u/rsanghi/graphics_raytracing/scene/kdTree.h \
+ /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
+ /usr/include/c++/13/ios /usr/include/c++/13/bits/ios_base.h \
+ /usr/include/c++/13/bits/locale_classes.h \
+ /usr/include/c++/13/bits/locale_classes.tcc \
+ /usr/include/c++/13/system_error /usr/include/c++/13/stdexcept \
+ /usr/include/c++/13/streambuf /usr/include/c++/13/bits/streambuf.tcc \
+ /usr/include/c++/13/bits/basic_ios.h \
+ /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
+ /usr/include/c++/13/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
+ /usr/include/c++/13/bits/locale_facets.tcc \
+ /usr/include/c++/13/bits/basic_ios.tcc \
+ /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
+ /usr/include/c++/13/bits/istream.tcc /usr/include/c++/13/list \
  /usr/include/c++/13/bits/stl_list.h /usr/include/c++/13/bits/list.tcc \
  /usr/include/FL/gl.h /usr/include/FL/Enumerations.H \
  /usr/include/FL/abi-version.h /usr/include/FL/Fl_Export.H \
@@ -370,17 +386,6 @@ CMakeFiles/ray.dir/scene/material.cpp.o: \
  /usr/include/glm/detail/setup.hpp \
  /usr/include/glm/gtx/component_wise.inl /usr/include/glm/gtx/norm.inl \
  /usr/include/glm/gtx/quaternion.inl /usr/include/c++/13/locale \
- /usr/include/c++/13/bits/locale_classes.h \
- /usr/include/c++/13/bits/locale_classes.tcc \
- /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
- /usr/include/c++/13/bits/ios_base.h /usr/include/c++/13/system_error \
- /usr/include/c++/13/stdexcept /usr/include/c++/13/streambuf \
- /usr/include/c++/13/bits/streambuf.tcc \
- /usr/include/c++/13/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
- /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
@@ -389,15 +394,10 @@ CMakeFiles/ray.dir/scene/material.cpp.o: \
  /usr/include/c++/13/bits/locale_conv.h /usr/include/c++/13/utility \
  /usr/include/c++/13/bits/stl_relops.h /usr/include/glm/gtx/io.inl \
  /usr/include/c++/13/iomanip /usr/include/c++/13/bits/quoted_string.h \
- /usr/include/c++/13/sstream /usr/include/c++/13/istream \
- /usr/include/c++/13/ios /usr/include/c++/13/bits/basic_ios.h \
- /usr/include/c++/13/bits/basic_ios.tcc /usr/include/c++/13/ostream \
- /usr/include/c++/13/bits/ostream.tcc \
- /usr/include/c++/13/bits/istream.tcc \
- /usr/include/c++/13/bits/sstream.tcc \
+ /usr/include/c++/13/sstream /usr/include/c++/13/bits/sstream.tcc \
  /usr/include/glm/gtc/matrix_access.hpp \
  /usr/include/glm/gtc/matrix_access.inl \
  /usr/include/glm/gtx/type_trait.hpp \
  /usr/include/glm/gtx/dual_quaternion.hpp \
  /usr/include/glm/gtx/dual_quaternion.inl \
- /usr/include/glm/gtx/type_trait.inl /usr/include/c++/13/iostream
+ /usr/include/glm/gtx/type_trait.inl

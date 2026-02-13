@@ -117,11 +117,18 @@ void Scene::add(Light *light) { lights.emplace_back(light); }
 bool Scene::intersect(ray &r, isect &i) const {
   if (kdtree && traceUI->kdSwitch()) {
     double tmin = 0.0;
-    double tmax = std::numeric_limits<double>::infinity(); // hello? what even are tmin and tmax
+    double tmax = std::numeric_limits<double>::infinity();
+      
     if (!sceneBounds.intersect(r, tmin, tmax)) {
       return false;
     }
-    return kdtree->findIntersection(r, i, tmin, tmax); // what would tmin and tmax b
+    if (tmax < 0) {
+      return false;
+    }
+    if (tmin < 0) {
+      tmin = 0;
+    } 
+    return kdtree->findIntersection(r, i, tmin, tmax);
   }
   double tmin = 0.0;
   double tmax = 0.0;
@@ -139,8 +146,7 @@ bool Scene::intersect(ray &r, isect &i) const {
     i.setT(1000.0);
   // if debugging,
   if (TraceUI::m_debug) {
-    addToIntersectCache(std::make_pair(new ray(r), new isect(i)));
-  }
+    addToIntersectCache(std::make_pair(new ray(r), new isect(i)));  }
   return have_one;
 }
 

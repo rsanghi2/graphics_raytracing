@@ -1,6 +1,6 @@
 #pragma once
 
-
+#include <iostream>
 #include <list>
 #include <algorithm>
 #include <map>
@@ -49,7 +49,7 @@ public:
 virtual ~kdTreeNodes(){}  ///is this rightttt???
     kdTreeNodes* buildTree(std::vector<Objects*> objList, int itemsInLeaf, int depth, BoundingBox bb, int maxDepth);
     SplitPlane<Objects> findBestSplitPlane(std::vector<Objects*> objList, BoundingBox bb);
-    bool findIntersection(ray &r, isect &i, double &tMin, double &tMax){
+    virtual bool findIntersection(ray &r, isect &i, double &tMin, double &tMax){
         return false;
     }
 };
@@ -102,7 +102,7 @@ kdTreeNodes<Objects>* kdTreeNodes<Objects>::buildTree(std::vector<Objects*> objL
             //add to left list 
             leftList.push_back(element);
         }
-        if(element->getBoundingBox().getMin()[bestPlane.axis]>= bestPlane.position){
+        if(element->getBoundingBox().getMax()[bestPlane.axis]>= bestPlane.position){
             //add to right list 
             rightList.push_back(element);
         }
@@ -237,29 +237,46 @@ SplitPlane<Objects> kdTreeNodes<Objects>::findBestSplitPlane(std::vector<Objects
 
 template <typename Objects>
 bool SplitNode<Objects>::findIntersection(ray &r, isect &i, double &tMin, double &tMax) {
-    if ((position > tMin && tMin > tMax) || (tMin < tMax && tMax < position)) {
-        // hitting left box only
-        if (leftChild->findIntersection(r, i, tMin, tMax)) {
-            return true;
+    const glm::dvec3& origin = r.getPosition();
+    const glm::dvec3& dir = r.getDirection();
+   
+    if (abs(dir[axis]) < RAY_EPSILON) {
+        // Ray is parallel to splitting plane
+        if (origin[axis] <= position) {
+            return leftChild->findIntersection(r, i, tMin, tMax);
+        } else {
+            return rightChild->findIntersection(r, i, tMin, tMax);
         }
     }
-    else if ((position < tMin && tMin < tMax) || (tMin > tMax && tMax > position)) {
-        // hitting right box only
-        if (rightChild->findIntersection(r, i, tMin, tMax)) {
-            return true;
-        }
+   
+    double tSplit = (position - origin[axis]) / dir[axis];
+    kdTreeNodes<Objects>* first;
+    kdTreeNodes<Objects>* second;
+   
+    if (dir[axis] > 0) {
+        // + dir
+        first = leftChild;  
+        second = rightChild;
+    } else {
+        // - dir
+        first = rightChild;
+        second = leftChild;
     }
-    else {
-        // hitting both
-        // is this right?
-        if (leftChild->findIntersection(r, i, tMin, tMax)) {
-            return true;
+   
+    if (tSplit > tMax || tSplit < 0) {
+        // near side
+        return first->findIntersection(r, i, tMin, tMax);
+    } else if (tSplit < tMin) {
+        // far side
+        return second->findIntersection(r, i, tMin, tMax);
+    } else {
+        // both sides
+        // near side first
+        if (first->findIntersection(r, i, tMin, tSplit)) {
+            return true; 
         }
-        if (rightChild->findIntersection(r, i, tMin, tMax)) {
-            return true;
-        }
+        return second->findIntersection(r, i, tSplit, tMax);
     }
-    return false;
 }
     
 template <typename Objects>
