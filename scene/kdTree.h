@@ -174,7 +174,7 @@ SplitPlane<Objects> kdTreeNodes<Objects>::findBestSplitPlane(std::vector<Objects
             int minCount = 0;
             int maxCount = 0;
             for(auto& minElement: minList) {
-                if (minElement.min < element.min) {
+                if (minElement.position < element.position) {
                     minCount++;
                 } else {
                     element.leftCnt = minCount;
@@ -182,10 +182,11 @@ SplitPlane<Objects> kdTreeNodes<Objects>::findBestSplitPlane(std::vector<Objects
                 }
             }
             for(auto& maxElement: maxList) {
-                if (maxElement.max < element.max) {
+                if (maxElement.position < element.position) {
                     maxCount++;
                 } else {
                     element.rightCnt = maxCount;
+                    break;
                 }
             }
             
@@ -199,11 +200,11 @@ SplitPlane<Objects> kdTreeNodes<Objects>::findBestSplitPlane(std::vector<Objects
             } 
             if (element.axis == 1) {
                 // divide width
-                length = element.position - bb.getMin()[1];
+                width = element.position - bb.getMin()[1];
             } 
             if (element.axis == 2) {
                 // divide height
-                length = element.position - bb.getMin()[2];
+                height = element.position - bb.getMin()[2];
             } 
             element.leftBoxArea = 2.0 * (length * width + width * height + height * length);
 
