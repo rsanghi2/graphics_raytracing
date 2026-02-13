@@ -77,8 +77,10 @@ private:
 template <typename Objects>
 class LeafNode : public kdTreeNodes<Objects> {
 public:
-LeafNode (std::vector<Objects*> objs) : objList(objs) {}
+    LeafNode (std::vector<Objects*> objs) : objList(objs) {}
+    ~LeafNode() {}
     bool findIntersection(ray &r, isect &i, double &tMin, double &tMax);
+
 private:
     std::vector<Objects*> objList;
 };
@@ -155,7 +157,7 @@ SplitPlane<Objects> kdTreeNodes<Objects>::findBestSplitPlane(std::vector<Objects
         list<SplitPlane<Objects>> maxList; 
 
          for (auto& element : candidates) {
-            if (element.min)
+            if (element.isMin)
             {
                 minList.push_back(element);
             } else {

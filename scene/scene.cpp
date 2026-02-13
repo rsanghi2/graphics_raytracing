@@ -93,7 +93,7 @@ void Geometry::ComputeBoundingBox() {
   bounds.setMin(glm::dvec3(newMin));
 }
 
-Scene::Scene() { ambientIntensity = glm::dvec3(0, 0, 0); }
+Scene::Scene() : kdtree(nullptr) { ambientIntensity = glm::dvec3(0, 0, 0); }
 
 Scene::~Scene() {
   delete kdtree; // added
@@ -115,11 +115,11 @@ void Scene::add(Light *light) { lights.emplace_back(light); }
 // Get any intersection with an object.  Return information about the
 // intersection through the reference parameter.
 bool Scene::intersect(ray &r, isect &i) const {
-  if (kdtree) {
-    double tmin = 0.0;
-    double tmax = std::numeric_limits<double>::infinity(); // hello? what even are tmin and tmax
-    return kdtree->findIntersection(r, i, tmin, tmax); // what would tmin and tmax b
-  }
+  // if (kdtree) {
+  //   double tmin = 0.0;
+  //   double tmax = std::numeric_limits<double>::infinity(); // hello? what even are tmin and tmax
+  //   return kdtree->findIntersection(r, i, tmin, tmax); // what would tmin and tmax b
+  // }
   double tmin = 0.0;
   double tmax = 0.0;
   bool have_one = false;
@@ -162,14 +162,17 @@ void Scene::computeSceneBounds(){
       }
       else{
         sceneBounds.setMin(glm::min(sceneBounds.getMin(),objBounds.getMin()));
-        sceneBounds.setMax(glm::min(sceneBounds.getMax(),objBounds.getMax()));
+        sceneBounds.setMax(glm::max(sceneBounds.getMax(),objBounds.getMax()));
       }
     }
   }
 }
 
 void Scene::buildKdTree(){
-  
+  if (kdtree) { // added this for segfault on second image render - might need to remove
+    delete kdtree;
+    kdtree = nullptr;
+  }
   computeSceneBounds();
   std::vector<Geometry*> boundedObjects; 
   for (Geometry* obj : objects) { 
