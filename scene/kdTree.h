@@ -30,267 +30,276 @@ using namespace std;
 template <typename Objects>
 class SplitPlane {
 public:
-    double position = 0.0;
-    double min = 0.0;
-    double max = 0.0;
-    int leftCnt = 0;
-    int rightCnt = 0;
-    double leftBoxArea = 0.0;
-    double rightBoxArea = 0.0;
-    int axis = 0; // 0 = x, ...
-    BoundingBox leftBBox;
-    BoundingBox rightBBox;
-    bool isMin;
+ 	double position = 0.0;
+ 	double min = 0.0;
+ 	double max = 0.0;
+ 	int leftCnt = 0;
+ 	int rightCnt = 0;
+ 	double leftBoxArea = 0.0;
+ 	double rightBoxArea = 0.0;
+ 	int axis = 0; // 0 = x, ...
+ 	BoundingBox leftBBox;
+ 	BoundingBox rightBBox;
+ 	bool isMin;
 };
 
 template <typename Objects>
 class kdTreeNodes {
 public:
-virtual ~kdTreeNodes(){}  ///is this rightttt???
-    kdTreeNodes* buildTree(std::vector<Objects*> objList, int itemsInLeaf, int depth, BoundingBox bb, int maxDepth);
-    SplitPlane<Objects> findBestSplitPlane(std::vector<Objects*> objList, BoundingBox bb);
-    virtual bool findIntersection(ray &r, isect &i, double &tMin, double &tMax){
-        return false;
-    }
+ 	virtual ~kdTreeNodes(){}
+ 	kdTreeNodes* buildTree(std::vector<Objects*> objList, int itemsInLeaf, int depth, BoundingBox bb, int maxDepth);
+ 	SplitPlane<Objects> findBestSplitPlane(std::vector<Objects*> objList, BoundingBox bb);
+ 	virtual bool findIntersection(ray &r, isect &i, double &tMin, double &tMax){
+ 		return false;
+ 	}
 };
 
 template <typename Objects>
 class SplitNode : public kdTreeNodes<Objects> {
 public:
-    SplitNode(double pos, int ax, kdTreeNodes<Objects>* l, kdTreeNodes<Objects>* r) : position(pos), axis(ax), leftChild(l), rightChild(r) {}
+	 SplitNode(double pos, int ax, kdTreeNodes<Objects>* l, kdTreeNodes<Objects>* r) : position(pos), axis(ax), leftChild(l), rightChild(r) {}
 
-    ~SplitNode () {
-        delete leftChild; 
-        delete rightChild;
-    } //??
-    bool findIntersection(ray &r, isect &i, double &tMin, double &tMax);
-    
+ 	~SplitNode () {
+ 		delete leftChild;
+ 		delete rightChild;
+ 	}
+ 	bool findIntersection(ray &r, isect &i, double &tMin, double &tMax);
+
 private:
-    // plane will be represented by dvec2 w [0] = axis, [1] = pos
-    //char axis[3]; // x, y, z
-    int axis; // new fixed
-    double position;
-    kdTreeNodes<Objects>* leftChild;
-    kdTreeNodes<Objects>* rightChild;
+ 	int axis;
+ 	double position;
+ 	kdTreeNodes<Objects>* leftChild;
+ 	kdTreeNodes<Objects>* rightChild;
 };
 
 template <typename Objects>
 class LeafNode : public kdTreeNodes<Objects> {
 public:
-    LeafNode (std::vector<Objects*> objs) : objList(objs) {}
-    ~LeafNode() {}
-    bool findIntersection(ray &r, isect &i, double &tMin, double &tMax);
+ 	LeafNode (std::vector<Objects*> objs) : objList(objs) {}
+ 	~LeafNode() {}
+ 	bool findIntersection(ray &r, isect &i, double &tMin, double &tMax);
 
 private:
-    std::vector<Objects*> objList;
+ 	std::vector<Objects*> objList;
 };
 
 
 template <typename Objects>
 kdTreeNodes<Objects>* kdTreeNodes<Objects>::buildTree(std::vector<Objects*> objList, int itemsInLeaf, int depth, BoundingBox bb, int maxDepth) {
-    //list<Objects>* leftList;
-   // list<Objects>* rightList;
+ 	// Base case: create leaf node
+ 	if(objList.size() <= itemsInLeaf || depth >= maxDepth){
+ 		return new LeafNode<Objects>(objList);
+ 	}
 
-    if(objList.size() <= itemsInLeaf || depth >= maxDepth){
-        return new LeafNode<Objects>(objList);
-    }
-    SplitPlane<Objects> bestPlane = findBestSplitPlane(objList, bb);
-    std::vector<Objects*> leftList;
-    std::vector<Objects*> rightList;
-    for (auto element : objList) {
-        if(element->getBoundingBox().getMin()[bestPlane.axis]<= bestPlane.position){
-            //add to left list 
-            leftList.push_back(element);
-        }
-        if(element->getBoundingBox().getMax()[bestPlane.axis]>= bestPlane.position){
-            //add to right list 
-            rightList.push_back(element);
-        }
-        // if(bestPlane.position == element->getBoundingBox().getMax()[bestPlane.axis] && bestPlane.position == element->getBoundingBox().getMin()[bestPlane.axis] && element->getN()<0/*doesnt exist currently*/)
-        // {
-        //     //add to left list 
-        //     leftList.push_back(element);
-        // }
-        // else if(bestPlane.position == element->getBoundingBox().getMax()[bestPlane.axis] && bestPlane.position == element->getBoundingBox().getMin()[bestPlane.axis] && element->getN()>=0/*doesnt exist currently*/)
-        // {
-        //     //add to right list 
-        //     rightList.push_back(element);
-        // }
-    }
-    if(rightList.size() == 0 || leftList.size() == 0){
-        return new LeafNode<Objects>(objList); // ??
-    }
-    else {
-        kdTreeNodes<Objects>* leftTree = buildTree(leftList, itemsInLeaf, depth + 1, bestPlane.leftBBox, maxDepth); // not setting leftbbox to anythikng
-        kdTreeNodes<Objects>* rightTree = buildTree(rightList, itemsInLeaf, depth + 1, bestPlane.rightBBox, maxDepth);
-        return new SplitNode(bestPlane.position, bestPlane.axis, leftTree, rightTree);
-    }
+ 	// Find best split plane
+ 	SplitPlane<Objects> bestPlane = findBestSplitPlane(objList, bb);
+
+ 	// Partition objects into left and right lists
+ 	std::vector<Objects*> leftList;
+ 	std::vector<Objects*> rightList;
+
+ 	for (auto element : objList) {
+ 		BoundingBox objBB = element->getBoundingBox();
+ 		double objMin = objBB.getMin()[bestPlane.axis];
+ 		double objMax = objBB.getMax()[bestPlane.axis];
+
+ 		// Object overlaps left side if its min is less than split position
+ 		bool inLeft = (objMin < bestPlane.position);
+ 		// Object overlaps right side if its max is greater than split position 
+ 		bool inRight = (objMax > bestPlane.position);
+
+ 		// Handle degenerate case: object lies exactly on the plane
+ 		if (objMin == bestPlane.position && objMax == bestPlane.position) {
+ 			// Put it on the left side only
+    	leftList.push_back(element);
+ 		} else {
+ 			if (inLeft) {
+    		leftList.push_back(element);
+ 			}
+ 			if (inRight) {
+    		rightList.push_back(element);
+ 			}
+ 		}
+ 	}	
+
+ 	// If split didn't help, create leaf node
+ 	if(rightList.size() == 0 || leftList.size() == 0){
+ 		return new LeafNode<Objects>(objList);
+ 	}
+
+ 	// Recursively build left and right subtrees
+ 	kdTreeNodes<Objects>* leftTree = buildTree(leftList, itemsInLeaf, depth + 1, bestPlane.leftBBox, maxDepth);
+ 	kdTreeNodes<Objects>* rightTree = buildTree(rightList, itemsInLeaf, depth + 1, bestPlane.rightBBox, maxDepth);
+
+ 	return new SplitNode<Objects>(bestPlane.position, bestPlane.axis, leftTree, rightTree);
 }
 
 template <typename Objects>
 SplitPlane<Objects> kdTreeNodes<Objects>::findBestSplitPlane(std::vector<Objects*> objList, BoundingBox bb) {
-    SplitPlane<Objects> best; //constructot
-            //new list
+ 	SplitPlane<Objects> best;
+ 	double minCost = 1e30; // Use a very large number
 
-    for (int i = 0; i < 3; i++) {
-        list<SplitPlane<Objects>> candidates;
+ 	// Try each axis
+ 	for (int axis = 0; axis < 3; axis++) {
+ 		std::list<SplitPlane<Objects>> candidatesList;
 
-        // looping thru axises
-        for (auto element : objList) {
-            SplitPlane<Objects> p1; // constructor
-            p1.position = element->getBoundingBox().getMin()[i]; // probably wrong, fix later
-            p1.min = element->getBoundingBox().getMin()[i];
-            p1.max = element->getBoundingBox().getMax()[i];
-            p1.axis = i;
-            p1.isMin = true;
+ 		// Create candidate split planes at object boundaries
+ 		for (auto element : objList) {
+ 			BoundingBox objBB = element->getBoundingBox();
 
-            SplitPlane<Objects> p2;
-            p2.position = element->getBoundingBox().getMax()[i];
-            p2.min = element->getBoundingBox().getMin()[i];
-            p2.max = element->getBoundingBox().getMax()[i];
-            p2.axis = i;
-            p2.isMin = false;
-            candidates.push_back(p1);
-            candidates.push_back(p2);
-        }
-        list<SplitPlane<Objects>> minList;
-        list<SplitPlane<Objects>> maxList; 
+ 			SplitPlane<Objects> p1;
+ 			p1.position = objBB.getMin()[axis];
+ 			p1.axis = axis;
+ 			p1.isMin = true;
 
-         for (auto& element : candidates) {
-            if (element.isMin)
-            {
-                minList.push_back(element);
-            } else {
-                maxList.push_back(element);
-            }
-        }
-        minList.sort([](const SplitPlane<Objects> a, const SplitPlane<Objects> b) {
-            return a.position < b.position; // Ascending order
-        });
-        maxList.sort([](const SplitPlane<Objects> a, const SplitPlane<Objects> b) {
-            return a.position > b.position; // descending order
-        });
-        for (auto& element : candidates) {
-            int minCount = 0;
-            int maxCount = 0;
-            for(auto& minElement: minList) {
-                if (minElement.position < element.position) {
-                    minCount++;
-                } else {
-                    element.leftCnt = minCount;
-                    break;
-                }
-            }
-            for(auto& maxElement: maxList) {
-                if (maxElement.position < element.position) {
-                    maxCount++;
-                } else {
-                    element.rightCnt = maxCount;
-                    break;
-                }
-            }
-            
-            // left box area calc
-            double length = bb.getMax()[0] - bb.getMin()[0];
-            double width = bb.getMax()[1] - bb.getMin()[1];
-            double height = bb.getMax()[2] - bb.getMin()[2];
-            if (element.axis == 0) {
-                // divide length
-                length = element.position - bb.getMin()[0];
-            } 
-            if (element.axis == 1) {
-                // divide width
-                width = element.position - bb.getMin()[1];
-            } 
-            if (element.axis == 2) {
-                // divide height
-                height = element.position - bb.getMin()[2];
-            } 
-            element.leftBoxArea = 2.0 * (length * width + width * height + height * length);
+ 			SplitPlane<Objects> p2;
+ 			p2.position = objBB.getMax()[axis];
+ 			p2.axis = axis;
+ 			p2.isMin = false;
 
-            element.rightBoxArea = bb.area() - element.leftBoxArea;
-            element.leftBBox = bb;
-            element.rightBBox = bb;
-            if (element.axis == 0){
-                element.leftBBox.setMax(glm::dvec3(element.position, bb.getMax()[1], bb.getMax()[2]));
-                element.rightBBox.setMin(glm::dvec3(element.position, bb.getMin()[1], bb.getMin()[2]));
-            } else if (element.axis == 1){
-                element.leftBBox.setMax(glm::dvec3(bb.getMax()[0],element.position, bb.getMax()[2]));
-                element.rightBBox.setMin(glm::dvec3( bb.getMin()[0],element.position, bb.getMin()[2]));
-            } else if (element.axis == 2){
-                element.leftBBox.setMax(glm::dvec3(bb.getMax()[0], bb.getMax()[1], element.position));
-                element.rightBBox.setMin(glm::dvec3( bb.getMin()[0],bb.getMin()[1], element.position));
-            }
-        }
+ 			candidatesList.push_back(p1);
+ 			candidatesList.push_back(p2);
+ 		}
 
-        double minSAM = 999999.0; // prob better way to do this
-        for (auto& element : candidates) {
-            double SAM = (element.leftCnt * element.leftBoxArea + element.rightCnt * element.rightBoxArea) / bb.area();
-            if (SAM < minSAM) {
-                minSAM = SAM;
-                best = element;
-            }
-        }
-    }
-    return best;
+ 		// Sort using list's member function
+ 		candidatesList.sort([](const SplitPlane<Objects>& a, const SplitPlane<Objects>& b) {
+ 			return a.position < b.position;
+ 		});
+
+ 		// Evaluate each candidate plane
+ 		for (auto& candidate : candidatesList) {
+ 			// Count objects on each side
+ 			int leftCount = 0;
+ 			int rightCount = 0;
+
+ 			for (auto obj : objList) {
+ 				BoundingBox objBB = obj->getBoundingBox();
+
+ 				// Object is on left if its min is less than split position
+ 				if (objBB.getMin()[axis] < candidate.position) {
+ 					leftCount++;
+ 				}
+ 				// Object is on right if its max is greater than split position
+ 				if (objBB.getMax()[axis] > candidate.position) {
+    			rightCount++;
+				}
+ 			}		
+
+ 			candidate.leftCnt = leftCount;
+ 			candidate.rightCnt = rightCount;
+
+ 			// Calculate left bounding box
+ 			candidate.leftBBox = bb;
+ 			glm::dvec3 leftMax = bb.getMax();
+ 			leftMax[axis] = candidate.position;
+ 			candidate.leftBBox.setMax(leftMax);
+
+			// Calculate right bounding box
+ 			candidate.rightBBox = bb;
+ 			glm::dvec3 rightMin = bb.getMin();
+ 			rightMin[axis] = candidate.position;
+ 			candidate.rightBBox.setMin(rightMin);
+
+ 			// Calculate surface areas
+ 			candidate.leftBoxArea = candidate.leftBBox.area();
+ 			candidate.rightBoxArea = candidate.rightBBox.area();
+			
+ 			// Calculate SAH cost
+ 			double parentArea = bb.area();
+ 			if (parentArea > 0) {
+ 				double cost = (leftCount * candidate.leftBoxArea + rightCount * candidate.rightBoxArea) / parentArea;
+
+ 				if (cost < minCost) {
+ 					minCost = cost;
+ 					best = candidate;
+ 				}
+ 			}
+ 		}
+ 	}
+
+ 	return best;
 }
 
 template <typename Objects>
 bool SplitNode<Objects>::findIntersection(ray &r, isect &i, double &tMin, double &tMax) {
-    const glm::dvec3& origin = r.getPosition();
-    const glm::dvec3& dir = r.getDirection();
-   
-    if (abs(dir[axis]) < RAY_EPSILON) {
-        // Ray is parallel to splitting plane
-        if (origin[axis] <= position) {
-            return leftChild->findIntersection(r, i, tMin, tMax);
-        } else {
-            return rightChild->findIntersection(r, i, tMin, tMax);
-        }
-    }
-   
-    double tSplit = (position - origin[axis]) / dir[axis];
-    kdTreeNodes<Objects>* first;
-    kdTreeNodes<Objects>* second;
-   
-    if (dir[axis] > 0) {
-        // + dir
-        first = leftChild;  
-        second = rightChild;
-    } else {
-        // - dir
-        first = rightChild;
-        second = leftChild;
-    }
-   
-    if (tSplit > tMax || tSplit < 0) {
-        // near side
-        return first->findIntersection(r, i, tMin, tMax);
-    } else if (tSplit < tMin) {
-        // far side
-        return second->findIntersection(r, i, tMin, tMax);
-    } else {
-        // both sides
-        // near side first
-        if (first->findIntersection(r, i, tMin, tSplit)) {
-            return true; 
-        }
-        return second->findIntersection(r, i, tSplit, tMax);
-    }
-}
-    
-template <typename Objects>
-bool LeafNode<Objects>::findIntersection(ray &r, isect &i, double &tMin, double &tMax) {
-    bool hit = false;
-    for (auto element : objList) {
-        isect c_i;
-        if (element->intersect(r, c_i) && c_i.getT() >= tMin && c_i.getT() <= tMax) {
-            // what does this mean?
-            i = c_i;
-            tMax = c_i.getT(); //?
-            hit = true; // return here or later
-        }
-    }
-    return hit;
+ 	const glm::dvec3& origin = r.getPosition();
+ 	const glm::dvec3& dir = r.getDirection();
+
+ 	// Check if ray is parallel to splitting plane
+ 	if (abs(dir[axis]) < RAY_EPSILON) {
+ 		// Ray is parallel to splitting plane - check which side the ray is on
+ 		if (origin[axis] < position) {
+ 			return leftChild->findIntersection(r, i, tMin, tMax);
+ 		} else {
+ 		return rightChild->findIntersection(r, i, tMin, tMax);
+ 		}
+ 	}
+
+ 	// Calculate intersection parameter with splitting plane
+ 	double tSplit = (position - origin[axis]) / dir[axis];
+
+ 	// Determine which child is near and which is far based on ray origin
+ 	kdTreeNodes<Objects>* first;
+ 	kdTreeNodes<Objects>* second;
+
+ 	// Check which side of the plane the ray origin is on
+ 	if (origin[axis] < position) {
+ 		// Origin is on left side
+ 		first = leftChild;
+ 		second = rightChild;
+ 	} else {
+ 		// Origin is on right side
+ 		first = rightChild;
+ 		second = leftChild;
+ 	}
+
+ 	// Case 1: Split plane is beyond tMax or behind ray origin
+ 	if (tSplit > tMax || tSplit < 0) {
+ 		// Ray interval entirely on near side
+ 		return first->findIntersection(r, i, tMin, tMax);
+ 	}
+ 	// Case 2: Split plane is before tMin
+ 	else if (tSplit < tMin) {
+ 		// Ray interval entirely on far side
+ 		return second->findIntersection(r, i, tMin, tMax);
+ 	}
+ 	// Case 3: Split plane is within [tMin, tMax]
+ 	else {
+ 		// Ray crosses the splitting plane - traverse both sides
+ 		// Try near child first with range [tMin, tSplit]
+ 		if (first->findIntersection(r, i, tMin, tSplit)) {
+ 			return true;
+ 		}
+ 		// If no hit in near child, try far child with range [tSplit, tMax]
+ 		return second->findIntersection(r, i, tSplit, tMax);
+ 	}
 }
 
+template <typename Objects>
+bool LeafNode<Objects>::findIntersection(ray &r, isect &i, double &tMin, double &tMax) {
+	bool hit = false;
+ 	isect closestIsect;
+ 	double closestT = tMax;
+
+ 	// Test all objects in leaf
+ 	for (auto element : objList) {
+ 		isect currentIsect;
+ 		if (element->intersect(r, currentIsect)) {
+ 			double t = currentIsect.getT();
+ 			// Check if intersection is within valid range and closer than current best
+ 			if (t >= tMin && t < closestT) {
+ 				closestT = t;
+ 				closestIsect = currentIsect;
+ 				hit = true;
+ 			}
+ 		}
+ 	}
+
+ 	// Update output parameters only if we found a hit
+ 	if (hit) {
+ 		i = closestIsect;
+ 		tMax = closestT;
+ 	}
+
+ 	return hit;
+}
