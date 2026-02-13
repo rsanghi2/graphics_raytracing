@@ -1,8 +1,8 @@
 CMakeFiles/ray.dir/scene/camera.cpp.o: \
- /u/rsanghi/graphics_raytracing/scene/camera.cpp \
- /usr/include/stdc-predef.h /u/rsanghi/graphics_raytracing/scene/camera.h \
- /u/rsanghi/graphics_raytracing/scene/ray.h \
- /u/rsanghi/graphics_raytracing/scene/material.h /usr/include/glm/glm.hpp \
+ /u/harinik/graphics_raytracing/scene/camera.cpp \
+ /usr/include/stdc-predef.h /u/harinik/graphics_raytracing/scene/camera.h \
+ /u/harinik/graphics_raytracing/scene/ray.h \
+ /u/harinik/graphics_raytracing/scene/material.h /usr/include/glm/glm.hpp \
  /usr/include/glm/detail/_fixes.hpp /usr/include/c++/13/cmath \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -303,4 +303,4 @@ CMakeFiles/ray.dir/scene/camera.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /u/rsanghi/graphics_raytracing/scene/../ui/TraceUI.h
+ /u/harinik/graphics_raytracing/scene/../ui/TraceUI.h

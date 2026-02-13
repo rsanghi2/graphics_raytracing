@@ -1,7 +1,7 @@
 CMakeFiles/ray.dir/fileio/images.cc.o: \
- /u/rsanghi/graphics_raytracing/fileio/images.cc \
+ /u/harinik/graphics_raytracing/fileio/images.cc \
  /usr/include/stdc-predef.h \
- /u/rsanghi/graphics_raytracing/fileio/images.h \
+ /u/harinik/graphics_raytracing/fileio/images.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -61,7 +61,7 @@ CMakeFiles/ray.dir/fileio/images.cc.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /u/rsanghi/graphics_raytracing/fileio/bitmap.h /usr/include/stdio.h \
+ /u/harinik/graphics_raytracing/fileio/bitmap.h /usr/include/stdio.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
@@ -75,7 +75,7 @@ CMakeFiles/ray.dir/fileio/images.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h /u/rsanghi/graphics_raytracing/fileio/pngimage.h \
+ /usr/include/strings.h /u/harinik/graphics_raytracing/fileio/pngimage.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/stringfwd.h \
  /usr/include/c++/13/bits/char_traits.h \
  /usr/include/c++/13/bits/postypes.h /usr/include/c++/13/cwchar \

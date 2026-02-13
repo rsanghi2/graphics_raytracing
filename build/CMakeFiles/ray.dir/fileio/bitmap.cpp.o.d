@@ -1,7 +1,7 @@
 CMakeFiles/ray.dir/fileio/bitmap.cpp.o: \
- /u/rsanghi/graphics_raytracing/fileio/bitmap.cpp \
+ /u/harinik/graphics_raytracing/fileio/bitmap.cpp \
  /usr/include/stdc-predef.h \
- /u/rsanghi/graphics_raytracing/fileio/bitmap.h \
+ /u/harinik/graphics_raytracing/fileio/bitmap.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
