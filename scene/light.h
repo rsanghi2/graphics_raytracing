@@ -10,6 +10,7 @@ using std::min;
 #include "../ui/TraceUI.h"
 #include "scene.h"
 #include <FL/gl.h>
+#include "kdTree.h"
 
 class Light : public SceneElement {
 public:

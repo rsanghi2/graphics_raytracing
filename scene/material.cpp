@@ -7,6 +7,7 @@ extern TraceUI *traceUI;
 #include "../fileio/images.h"
 #include <glm/gtx/io.hpp>
 #include <iostream>
+#include "kdTree.h"
 
 using namespace std;
 extern bool debugMode;

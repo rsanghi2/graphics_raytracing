@@ -20,6 +20,7 @@
 #include "camera.h"
 #include "material.h"
 #include "ray.h"
+#include "kdTree.h"
 
 #include <glm/geometric.hpp>
 #include <glm/mat3x3.hpp>
@@ -33,7 +34,7 @@ using std::unique_ptr;
 class Light;
 class Scene;
 
-template <typename Obj> class KdTree;
+// template <typename Obj> class KdTree; // removed for kdtree
 
 // A SceneElement is anything that lives within a scene. The behavior is
 // intentionally very barebones, since all actual entities are descended
@@ -172,6 +173,10 @@ public:
   void add(Light *light);
 
   bool intersect(ray &r, isect &i) const;
+  void computeSceneBounds();
+  void buildKdTree();
+
+
 
   auto beginLights() const { return lights.begin(); }
   auto endLights() const { return lights.end(); }
@@ -227,7 +232,7 @@ private:
   // hasBoundingBoxCapability() are exempt from this requirement.
   BoundingBox sceneBounds;
 
-  KdTree<Geometry> *kdtree;
+  kdTreeNodes<Geometry> *kdtree; // KdTree<Geometry> *kdtree
 
   mutable std::mutex intersectionCacheMutex;
 

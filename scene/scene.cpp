@@ -9,6 +9,8 @@
 #include <iostream>
 
 using namespace std;
+extern TraceUI *traceUI;
+
 
 bool Geometry::intersect(ray &r, isect &i) const {
   double tmin, tmax;
@@ -94,6 +96,7 @@ void Geometry::ComputeBoundingBox() {
 Scene::Scene() { ambientIntensity = glm::dvec3(0, 0, 0); }
 
 Scene::~Scene() {
+  delete kdtree; // added
   for (auto &obj : objects)
     delete obj;
   for (auto &light : lights)
@@ -112,6 +115,11 @@ void Scene::add(Light *light) { lights.emplace_back(light); }
 // Get any intersection with an object.  Return information about the
 // intersection through the reference parameter.
 bool Scene::intersect(ray &r, isect &i) const {
+  if (kdtree) {
+    double tmin = 0.0;
+    double tmax = std::numeric_limits<double>::infinity(); // hello? what even are tmin and tmax
+    return kdtree->findIntersection(r, i, tmin, tmax); // what would tmin and tmax b
+  }
   double tmin = 0.0;
   double tmax = 0.0;
   bool have_one = false;
@@ -140,4 +148,40 @@ TextureMap *Scene::getTexture(string name) {
     return textureCache[name].get();
   }
   return itr->second.get();
+}
+
+void Scene::computeSceneBounds(){
+  sceneBounds = BoundingBox();
+  bool firstObject = true;
+  for(Geometry* obj: objects){
+    if(obj->hasBoundingBoxCapability()){
+      const BoundingBox& objBounds = obj->getBoundingBox();
+      if(firstObject){
+        sceneBounds = objBounds;
+        firstObject = false;
+      }
+      else{
+        sceneBounds.setMin(glm::min(sceneBounds.getMin(),objBounds.getMin()));
+        sceneBounds.setMax(glm::min(sceneBounds.getMax(),objBounds.getMax()));
+      }
+    }
+  }
+}
+
+void Scene::buildKdTree(){
+  
+  computeSceneBounds();
+  std::vector<Geometry*> boundedObjects; 
+  for (Geometry* obj : objects) { 
+    if (obj->hasBoundingBoxCapability()) { 
+      boundedObjects.push_back(obj); 
+    } 
+  }
+   
+  if (!boundedObjects.empty()) { 
+    kdTreeNodes<Geometry> builder; 
+    kdtree = builder.buildTree(boundedObjects, traceUI->getLeafSize(), 0, sceneBounds, traceUI->getMaxDepth());
+  } else {
+    kdtree = nullptr; 
+  }
 }

@@ -2,6 +2,7 @@
 #include "../ui/TraceUI.h"
 #include "material.h"
 #include "scene.h"
+#include "kdTree.h"
 
 
 const Material &isect::getMaterial() const {
