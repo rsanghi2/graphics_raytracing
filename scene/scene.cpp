@@ -115,9 +115,12 @@ void Scene::add(Light *light) { lights.emplace_back(light); }
 // Get any intersection with an object.  Return information about the
 // intersection through the reference parameter.
 bool Scene::intersect(ray &r, isect &i) const {
-  if (kdtree) {
+  if (kdtree && traceUI->kdSwitch()) {
     double tmin = 0.0;
     double tmax = std::numeric_limits<double>::infinity(); // hello? what even are tmin and tmax
+    if (!sceneBounds.intersect(r, tmin, tmax)) {
+      return false;
+    }
     return kdtree->findIntersection(r, i, tmin, tmax); // what would tmin and tmax b
   }
   double tmin = 0.0;
