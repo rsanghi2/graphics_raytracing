@@ -1,7 +1,7 @@
 CMakeFiles/ray.dir/parser/JsonParser.cpp.o: \
- /u/harinik/graphics_raytracing/parser/JsonParser.cpp \
+ /u/rsanghi/graphics_raytracing/parser/JsonParser.cpp \
  /usr/include/stdc-predef.h \
- /u/harinik/graphics_raytracing/parser/JsonParser.h \
+ /u/rsanghi/graphics_raytracing/parser/JsonParser.h \
  /usr/include/c++/13/map /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -213,7 +213,7 @@ CMakeFiles/ray.dir/parser/JsonParser.cpp.o: \
  /usr/include/glm/ext/vector_int4_sized.hpp \
  /usr/include/glm/ext/vector_uint4.hpp \
  /usr/include/glm/ext/vector_uint4_sized.hpp \
- /u/harinik/graphics_raytracing/libs/json.hpp \
+ /u/rsanghi/graphics_raytracing/libs/json.hpp \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
@@ -277,14 +277,14 @@ CMakeFiles/ray.dir/parser/JsonParser.cpp.o: \
  /usr/include/c++/13/bits/indirect_array.h /usr/include/c++/13/version \
  /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/c++/13/any \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/Box.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/../scene/scene.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/Box.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/scene.h \
  /usr/include/c++/13/mutex /usr/include/c++/13/bits/std_mutex.h \
  /usr/include/c++/13/bits/unique_lock.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/../scene/bbox.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/../scene/camera.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/../scene/ray.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/../scene/material.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/bbox.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/camera.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/ray.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/material.h \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/glm/detail/setup.hpp /usr/include/c++/13/climits \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
@@ -379,16 +379,16 @@ CMakeFiles/ray.dir/parser/JsonParser.cpp.o: \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
  /usr/include/glm/detail/func_integer.inl \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/../scene/kdTree.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/kdTree.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/list \
  /usr/include/c++/13/bits/stl_list.h /usr/include/c++/13/bits/list.tcc \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/Cone.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/Cylinder.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/Sphere.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/Square.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/trimesh.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/../scene/material.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/../scene/ray.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/Cone.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/Cylinder.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/Sphere.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/Square.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/trimesh.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/material.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/ray.h \
  /usr/include/glm/gtc/matrix_transform.hpp \
  /usr/include/glm/ext/matrix_projection.hpp \
  /usr/include/glm/gtc/constants.hpp \
@@ -401,16 +401,16 @@ CMakeFiles/ray.dir/parser/JsonParser.cpp.o: \
  /usr/include/glm/ext/matrix_transform.hpp \
  /usr/include/glm/ext/matrix_transform.inl \
  /usr/include/glm/gtc/matrix_transform.inl \
- /u/harinik/graphics_raytracing/parser/../scene/light.h \
- /u/harinik/graphics_raytracing/parser/../scene/../ui/TraceUI.h \
- /u/harinik/graphics_raytracing/parser/../scene/scene.h \
+ /u/rsanghi/graphics_raytracing/parser/../scene/light.h \
+ /u/rsanghi/graphics_raytracing/parser/../scene/../ui/TraceUI.h \
+ /u/rsanghi/graphics_raytracing/parser/../scene/scene.h \
  /usr/include/FL/gl.h /usr/include/FL/Enumerations.H \
  /usr/include/FL/abi-version.h /usr/include/FL/Fl_Export.H \
  /usr/include/FL/fl_types.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h \
- /u/harinik/graphics_raytracing/parser/../scene/scene.h \
- /u/harinik/graphics_raytracing/parser/ParserException.h \
- /u/harinik/graphics_raytracing/libs/tiny_obj_loader.h \
+ /u/rsanghi/graphics_raytracing/parser/../scene/scene.h \
+ /u/rsanghi/graphics_raytracing/parser/ParserException.h \
+ /u/rsanghi/graphics_raytracing/libs/tiny_obj_loader.h \
  /usr/include/c++/13/set /usr/include/c++/13/bits/stl_set.h \
  /usr/include/c++/13/bits/stl_multiset.h \
  /usr/include/glm/gtc/type_ptr.hpp /usr/include/glm/gtc/quaternion.hpp \

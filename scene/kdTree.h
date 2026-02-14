@@ -291,6 +291,9 @@ bool LeafNode<Objects>::findIntersection(ray &r, isect &i, double &tMin, double 
  				closestT = t;
  				closestIsect = currentIsect;
  				hit = true;
+				if (r.type() == ray::SHADOW) {
+					break; // small optimiztion
+				}
  			}
  		}
  	}

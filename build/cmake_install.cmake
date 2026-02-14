@@ -1,4 +1,4 @@
-# Install script for directory: /u/harinik/graphics_raytracing
+# Install script for directory: /u/rsanghi/graphics_raytracing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/u/harinik/graphics_raytracing/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/u/rsanghi/graphics_raytracing/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

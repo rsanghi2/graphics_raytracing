@@ -1,7 +1,7 @@
 CMakeFiles/ray.dir/RayTracer.cpp.o: \
- /u/harinik/graphics_raytracing/RayTracer.cpp /usr/include/stdc-predef.h \
- /u/harinik/graphics_raytracing/RayTracer.h \
- /u/harinik/graphics_raytracing/scene/cubeMap.h /usr/include/glm/vec3.hpp \
+ /u/rsanghi/graphics_raytracing/RayTracer.cpp /usr/include/stdc-predef.h \
+ /u/rsanghi/graphics_raytracing/RayTracer.h \
+ /u/rsanghi/graphics_raytracing/scene/cubeMap.h /usr/include/glm/vec3.hpp \
  /usr/include/glm/ext/vector_bool3.hpp \
  /usr/include/glm/detail/type_vec3.hpp \
  /usr/include/glm/detail/qualifier.hpp /usr/include/glm/detail/setup.hpp \
@@ -135,8 +135,8 @@ CMakeFiles/ray.dir/RayTracer.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /u/harinik/graphics_raytracing/scene/ray.h \
- /u/harinik/graphics_raytracing/scene/material.h /usr/include/glm/glm.hpp \
+ /u/rsanghi/graphics_raytracing/scene/ray.h \
+ /u/rsanghi/graphics_raytracing/scene/material.h /usr/include/glm/glm.hpp \
  /usr/include/glm/detail/_fixes.hpp /usr/include/c++/13/cmath \
  /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -314,22 +314,22 @@ CMakeFiles/ray.dir/RayTracer.cpp.o: \
  /usr/include/c++/13/bits/stl_queue.h /usr/include/c++/13/thread \
  /usr/include/c++/13/bits/std_thread.h \
  /usr/include/c++/13/bits/this_thread_sleep.h /usr/include/c++/13/atomic \
- /u/harinik/graphics_raytracing/scene/light.h \
+ /u/rsanghi/graphics_raytracing/scene/light.h \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/uniform_int_dist.h \
  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
- /u/harinik/graphics_raytracing/scene/../ui/TraceUI.h \
- /u/harinik/graphics_raytracing/scene/scene.h /usr/include/c++/13/map \
+ /u/rsanghi/graphics_raytracing/scene/../ui/TraceUI.h \
+ /u/rsanghi/graphics_raytracing/scene/scene.h /usr/include/c++/13/map \
  /usr/include/c++/13/bits/stl_tree.h \
  /usr/include/c++/13/bits/node_handle.h \
  /usr/include/c++/13/bits/stl_map.h \
  /usr/include/c++/13/bits/stl_multimap.h \
  /usr/include/c++/13/bits/erase_if.h \
- /u/harinik/graphics_raytracing/scene/bbox.h \
- /u/harinik/graphics_raytracing/scene/camera.h \
- /u/harinik/graphics_raytracing/scene/ray.h \
- /u/harinik/graphics_raytracing/scene/kdTree.h \
+ /u/rsanghi/graphics_raytracing/scene/bbox.h \
+ /u/rsanghi/graphics_raytracing/scene/camera.h \
+ /u/rsanghi/graphics_raytracing/scene/ray.h \
+ /u/rsanghi/graphics_raytracing/scene/kdTree.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/bits/ios_base.h \
  /usr/include/c++/13/bits/locale_classes.h \
@@ -351,8 +351,8 @@ CMakeFiles/ray.dir/RayTracer.cpp.o: \
  /usr/include/FL/abi-version.h /usr/include/FL/Fl_Export.H \
  /usr/include/FL/fl_types.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h \
- /u/harinik/graphics_raytracing/scene/material.h \
- /u/harinik/graphics_raytracing/parser/JsonParser.h \
+ /u/rsanghi/graphics_raytracing/scene/material.h \
+ /u/rsanghi/graphics_raytracing/parser/JsonParser.h \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
  /usr/include/c++/13/bits/fs_path.h /usr/include/c++/13/locale \
  /usr/include/c++/13/bits/locale_facets_nonio.h \
@@ -369,7 +369,7 @@ CMakeFiles/ray.dir/RayTracer.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc /usr/include/c++/13/optional \
  /usr/include/c++/13/bits/enable_special_members.h \
- /u/harinik/graphics_raytracing/libs/json.hpp \
+ /u/rsanghi/graphics_raytracing/libs/json.hpp \
  /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
  /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
@@ -393,15 +393,15 @@ CMakeFiles/ray.dir/RayTracer.cpp.o: \
  /usr/include/c++/13/bits/indirect_array.h /usr/include/c++/13/version \
  /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/c++/13/any \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/Box.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/../scene/scene.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/Cone.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/Cylinder.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/Sphere.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/Square.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/trimesh.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/../scene/material.h \
- /u/harinik/graphics_raytracing/parser/../SceneObjects/../scene/ray.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/Box.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/scene.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/Cone.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/Cylinder.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/Sphere.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/Square.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/trimesh.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/material.h \
+ /u/rsanghi/graphics_raytracing/parser/../SceneObjects/../scene/ray.h \
  /usr/include/glm/gtc/matrix_transform.hpp \
  /usr/include/glm/ext/matrix_projection.hpp \
  /usr/include/glm/gtc/constants.hpp \
@@ -414,15 +414,15 @@ CMakeFiles/ray.dir/RayTracer.cpp.o: \
  /usr/include/glm/ext/matrix_transform.hpp \
  /usr/include/glm/ext/matrix_transform.inl \
  /usr/include/glm/gtc/matrix_transform.inl \
- /u/harinik/graphics_raytracing/parser/../scene/light.h \
- /u/harinik/graphics_raytracing/parser/../scene/scene.h \
- /u/harinik/graphics_raytracing/parser/Parser.h \
- /u/harinik/graphics_raytracing/parser/ParserException.h \
- /u/harinik/graphics_raytracing/parser/Tokenizer.h \
- /u/harinik/graphics_raytracing/parser/../fileio/buffer.h \
- /u/harinik/graphics_raytracing/parser/Token.h \
- /u/harinik/graphics_raytracing/parser/Tokenizer.h \
- /u/harinik/graphics_raytracing/ui/TraceUI.h /usr/include/glm/gtx/io.hpp \
+ /u/rsanghi/graphics_raytracing/parser/../scene/light.h \
+ /u/rsanghi/graphics_raytracing/parser/../scene/scene.h \
+ /u/rsanghi/graphics_raytracing/parser/Parser.h \
+ /u/rsanghi/graphics_raytracing/parser/ParserException.h \
+ /u/rsanghi/graphics_raytracing/parser/Tokenizer.h \
+ /u/rsanghi/graphics_raytracing/parser/../fileio/buffer.h \
+ /u/rsanghi/graphics_raytracing/parser/Token.h \
+ /u/rsanghi/graphics_raytracing/parser/Tokenizer.h \
+ /u/rsanghi/graphics_raytracing/ui/TraceUI.h /usr/include/glm/gtx/io.hpp \
  /usr/include/glm/gtx/quaternion.hpp /usr/include/glm/gtc/quaternion.hpp \
  /usr/include/glm/ext/vector_relational.hpp \
  /usr/include/glm/ext/vector_relational.inl \

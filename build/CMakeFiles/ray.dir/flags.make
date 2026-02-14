@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/lib/fltk -isystem /u/harinik/graphics_raytracing/libs
+CXX_INCLUDES = -I/usr/lib/fltk -isystem /u/rsanghi/graphics_raytracing/libs
 
 CXX_FLAGS =  -Wall -Wextra -Wno-unknown-pragmas -std=gnu++17
 
